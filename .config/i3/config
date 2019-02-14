@@ -1,0 +1,219 @@
+gaps inner 10
+gaps outer 20
+
+set $black #000000
+set $white #FFFFFF
+set $grey #888888
+set $orange #EE7600
+set $blue #003366
+set $bg-color #203139
+set $text-color $white
+
+set $path ~/.config/i3
+set $wallpaper ~/Pictures/dark.jpg
+
+set $mod Mod4
+
+font pango:System San Francisco 14
+
+bindsym $mod+shift+x exec --no-startup-id ~/scripts/lock
+for_window [class="^.*"] border pixel 8
+
+# Use Mouse+$mod to drag floating windows to their wanted position
+floating_modifier $mod
+
+bindsym $mod+Return exec termite
+bindsym $mod+Shift+q kill
+bindsym $mod+d exec --no-startup-id rofi -show run
+
+# change focus
+bindsym $mod+j focus left
+bindsym $mod+k focus down
+bindsym $mod+l focus up
+bindsym $mod+semicolon focus right
+
+# alternatively, you can use the cursor keys:
+bindsym $mod+Left focus left
+bindsym $mod+Down focus down
+bindsym $mod+Up focus up
+bindsym $mod+Right focus right
+
+# move focused window
+bindsym $mod+Shift+j move left
+bindsym $mod+Shift+k move down
+bindsym $mod+Shift+l move up
+bindsym $mod+Shift+semicolon move right
+
+# alternatively, you can use the cursor keys:
+bindsym $mod+Shift+Left move left
+bindsym $mod+Shift+Down move down
+bindsym $mod+Shift+Up move up
+bindsym $mod+Shift+Right move right
+
+# split in horizontal orientation
+bindsym $mod+h split h
+
+# split in vertical orientation
+bindsym $mod+v split v
+
+# enter fullscreen mode for the focused container
+bindsym $mod+f fullscreen toggle
+
+# change container layout (stacked, tabbed, toggle split)
+bindsym $mod+s layout stacking
+bindsym $mod+w layout tabbed
+bindsym $mod+e layout toggle split
+
+# toggle tiling / floating
+bindsym $mod+Shift+space floating toggle
+
+# change focus between tiling / floating windows
+bindsym $mod+space focus mode_toggle
+
+# focus the parent container
+bindsym $mod+a focus parent
+
+# focus the child container
+#bindsym $mod+d focus child
+
+# Define names for default workspaces for which we configure key bindings later on.
+# We use variables to avoid repeating the names in multiple places.
+set $ws1 "1"
+set $ws2 "2"
+set $ws3 "3"
+set $ws4 "4"
+set $ws5 "5"
+set $ws6 "6"
+set $ws7 "7"
+set $ws8 "8"
+set $ws9 "9"
+set $ws10 "10"
+
+# switch to workspace
+bindsym $mod+1 workspace $ws1
+bindsym $mod+2 workspace $ws2
+bindsym $mod+3 workspace $ws3
+bindsym $mod+4 workspace $ws4
+bindsym $mod+5 workspace $ws5
+bindsym $mod+6 workspace $ws6
+bindsym $mod+7 workspace $ws7
+bindsym $mod+8 workspace $ws8
+bindsym $mod+9 workspace $ws9
+bindsym $mod+0 workspace $ws10
+
+# move focused container to workspace
+bindsym $mod+Shift+1 move container to workspace $ws1
+bindsym $mod+Shift+2 move container to workspace $ws2
+bindsym $mod+Shift+3 move container to workspace $ws3
+bindsym $mod+Shift+4 move container to workspace $ws4
+bindsym $mod+Shift+5 move container to workspace $ws5
+bindsym $mod+Shift+6 move container to workspace $ws6
+bindsym $mod+Shift+7 move container to workspace $ws7
+bindsym $mod+Shift+8 move container to workspace $ws8
+bindsym $mod+Shift+9 move container to workspace $ws9
+bindsym $mod+Shift+0 move container to workspace $ws10
+
+# reload the configuration file
+bindsym $mod+Shift+c reload
+# restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
+bindsym $mod+Shift+r restart
+# exit i3 (logs you out of your X session)
+bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'Do you want to exit i3?' -b 'Yes, exit i3' 'i3-msg exit'"
+
+client.focused          #ff7899 #ff5577 #ffffff #dfbd8a #877857
+
+# User defined
+exec --no-startup-id nm-applet
+exec --no-startup-id xset b off
+exec --no-startup-id feh --bg-scale $wallpaper
+exec --no-startup-id megasync
+
+assign [class="Firefox"] $ws1
+assign [class="Transmission-gtk"] $ws9
+assign [class="google-musicmanager"] $ws10
+assign [class="Google Play Music Desktop Player"] $ws10
+for_window [class="cmus"] move workspace 10
+
+bindsym $mod+y exec --no-startup-id notify-send 'Converting video to mp3' && \
+            youtube-dl `xsel -ob` && \
+            notify-send -u low 'Video converted successfully'
+bindsym Print exec --no-startup-id maim ~/Pictures/Screenshots/$(date +%s).png && \
+            notify-send 'Screenshot Captured'
+bindsym $mod+Print exec --no-startup-id maim -s ~/Pictures/Screenshots/$(date +%s).png && notify-send 'Window Screenshot Captured'
+
+mode "resize" {
+        bindsym j resize shrink width 10 px or 10 ppt
+        bindsym k resize grow height 10 px or 10 ppt
+        bindsym l resize shrink height 10 px or 10 ppt
+        bindsym semicolon resize grow width 10 px or 10 ppt
+
+        bindsym Left resize shrink width 10 px or 10 ppt
+        bindsym Down resize grow height 10 px or 10 ppt
+        bindsym Up resize shrink height 10 px or 10 ppt
+        bindsym Right resize grow width 10 px or 10 ppt
+
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+        bindsym $mod+r mode "default"
+}
+
+bar {
+    font pango:DejaVu Sans Mono, FontAwesome 12
+    position top
+    status_command /usr/bin/i3status-rs $path/status_config_top.toml
+    colors {
+        separator #222222
+        background #1E2B24
+        statusline #222222
+        focused_workspace #000088CC #497252 #ffffff
+        active_workspace #333333 #333333 #ffffff
+        inactive_workspace #333333 #333333 #888888
+        urgent_workspace #2f343a #900000 #ffffff
+    }
+}
+
+#bar {
+#    font pango:DejaVu Sans Mono, FontAwesome 12
+#    position bottom
+#    workspace_buttons no
+#    status_command /usr/bin/i3status-rs $path/status_config_bottom.toml
+#    colors {
+#        separator #222222
+#        background #222222
+#        statusline #222222
+#        focused_workspace #0088CC #0088CC #ffffff
+#        active_workspace #333333 #333333 #ffffff
+#        inactive_workspace #333333 #333333 #888888
+#        urgent_workspace #2f343a #900000 #ffffff
+#    }
+#}
+
+bindsym $mod+r mode "resize"
+
+# Sound controls
+#bindsym XF86AudioRaiseVolume exec --no-startup-id amixer sset Master 4+
+#bindsym XF86AudioLowerVolume exec --no-startup-id amixer sset Master 4-
+bindsym XF86AudioMute exec --no-startup-id amixer set Master toggle
+bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5%
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5%
+#bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle
+# Sreen brightness controls
+bindsym XF86MonBrightnessUp exec light -A 5 && notify-send `light -G`
+bindsym XF86MonBrightnessDown exec light -U 5 && notify-send `light -G`
+
+# ***************   cmus   ****************
+# Media player controls
+bindsym XF86AudioPlay exec --no-startup-id $path/cmus.sh play
+bindsym XF86AudioPause exec --no-startup-id $path/cmus.sh play
+bindsym XF86AudioNext exec --no-startup-id $path/cmus.sh next
+bindsym XF86AudioPrev exec --no-startup-id  $path/cmus.sh prev
+# play control
+# start cmus if not active
+bindsym Shift+Ctrl+space exec --no-startup-id $path/cmus.sh play
+bindsym Shift+Ctrl+d exec --no-startup-id $path/cmus.sh next
+bindsym Shift+Ctrl+a exec --no-startup-id $path/cmus.sh prev
+# seek
+bindsym Shift+Ctrl+s exec --no-startup-id $path/cmus.sh seekf
+bindsym Shift+Ctrl+w exec --no-startup-id $path/cmus.sh seekp
+# update playlist
+bindsym Shift+Ctrl+u exec --no-startup-id $path/cmus.sh update

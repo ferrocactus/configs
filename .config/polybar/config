@@ -1,0 +1,463 @@
+[colors]
+
+;green/blue
+background = #0011402a
+;background = #FF036266
+background-dark = #000000
+background-alt = #444
+foreground = #FFFFFF
+foreground-alt = #17BEBB
+tray-background = #000000
+
+primary = #ffb52a
+secondary = #e60053
+alert = #bd2c40
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;battery
+charging-underline = #7AE582
+discharging-underline = #FF9926
+full-underline = #84c318
+battery-ramp-capacity = #AC550B
+battery-animation-charging = #5CBB19
+;i3
+i3-label-focused-background = #24464c
+i3-label-focused-foreground = #FFFFFF
+i3-label-focused-underline = #FFFFFF
+i3-label-focused-padding = #FFFFFF
+i3-label-unfocused-foreground = #668877
+i3-label-urgent-background = #AC550B
+i3-label-visible-foreground = #BB0000
+;date and time
+time = #000a6cf5
+time-label-foreground = #FFFFFF
+time-prefix = ${self.time}
+;filesystem
+fs-label-mounted-foreground = #FFFFC9
+fs-label-unmounted-foreground = #AC550B
+;volume
+vol-foreground = #FFFFFF
+vol-muted-foreground = #AC550B
+;menu
+menu-close-foreground = #5CBB19
+menu-open-foreground = #FFFFFF
+menu-separator-foreground = #FFFFFF
+menu-reboot-foreground = #E6E64A
+menu-poweroff-foreground = #E64E4A
+;wlan
+wlan-disconnected-foreground = #ff8866
+;cpu
+cpu-foreground = #54ABF8
+;memory
+memory-foreground = #99C24D
+;gpu temp
+gpu-foreground = #F18F01
+;cmus
+cmus-foreground = #FFFFFF
+
+[bar/top]
+;monitor = ${env:MONITOR:eDP-1-1}
+width = 100%
+height = 25
+radius = 0.0
+fixed-center = true
+
+background = ${colors.background}
+foreground = ${colors.foreground}
+
+line-size = 3
+line-color = #f00
+
+border-size = 0
+border-color = #000000
+
+padding-left = 0
+padding-right = 1
+
+module-margin-left = 1
+module-margin-right = 2
+
+font-0 = fixed:pixelsize=13;1
+font-1 = unifont:fontformat=truetype:size=8:antialias=false;0
+font-2 = siji:pixelsize=13;1
+font-3 = "SFNS Display:pixelsize=13;1"
+font-4 = "Font Awesome:pixelsize=13;2"
+
+modules-left = i3
+modules-center = date
+modules-right = volume battery
+
+tray-position = right
+tray-padding = 2
+tray-detached = false
+;tray-transparent = true
+tray-background = ${colors.tray_background}
+
+cursor-click = pointer
+cursor-scroll = ns-resize
+
+[bar/bottom]
+;monitor = ${env:MONITOR:eDP-1-1}
+width = 100%
+height = 25
+radius = 0.0
+fixed-center = true
+bottom = true
+
+background = ${colors.background}
+foreground = ${colors.foreground}
+
+line-size = 3
+line-color = #f00
+
+border-size = 0
+border-color = #000000
+
+padding-left = 0
+padding-right = 1
+
+module-margin-left = 1
+module-margin-right = 1
+
+font-0 = fixed:pixelsize=13;1
+font-1 = unifont:fontformat=truetype:size=8:antialias=false;0
+font-2 = siji:pixelsize=13;1
+font-3 = "SFNS Display:pixelsize=13;1"
+font-4 = "Font Awesome:pixelsize=13;2"
+
+modules-left = 
+modules-center = 
+modules-right = filesystem cpu temperature-cpu temperature-gpu memory
+
+tray-position = right
+tray-padding = 2
+tray-detached = false
+;tray-transparent = true
+tray-background = ${colors.tray_background}
+
+cursor-click = pointer
+cursor-scroll = ns-resize
+
+[module/filesystem]
+type = internal/fs
+interval = 60
+spacing = 1
+
+mount-0 = /
+;mount-1 = ~/mnt/usb
+
+label-mounted-font = 4
+label-mounted = %{F#5CBB19}%mountpoint%%{F-}: %percentage_used%%
+label-mounted-foreground = ${colors.fs-label-mounted-foreground}
+
+label-unmounted-font = 4
+label-unmounted =  
+label-unmounted-foreground = ${colors.fs-label-unmounted-foreground}
+ 
+[module/i3]
+type = internal/i3
+format = <label-state> <label-mode>
+index-sort = true
+wrapping-scroll = false
+
+pin-workspaces = true
+
+ws-icon-0 = 1;1
+ws-icon-1 = 2;2
+ws-icon-2 = 3;3
+ws-icon-3 = 4;4
+ws-icon-4 = 5;5
+ws-icon-5 = 6;6
+ws-icon-6 = 7;7
+ws-icon-7 = 8;8
+ws-icon-8 = 9;9
+ws-icon-9 = 10;0
+ws-icon-default = 
+
+label-unfocused-font = 4
+label-focused-font = 4
+label-visible-font = 4
+label-urgent-font = 4
+
+; Only show workspaces on the same output as the bar
+;pin-workspaces = true
+
+label-mode-padding = 1
+label-mode-foreground = #000
+label-mode-background = ${colors.primary}
+
+; focused = Active workspace on focused monitor
+;label-focused = 
+label-focused = %icon%
+#label-focused-background = ${colors.i3-label-focused-background}
+label-focused-foreground = ${colors.i3-label-focused-foreground}
+#label-focused-underline = ${colors.i3-label-focused-underline}
+label-focused-padding = 1
+
+; unfocused = Inactive workspace on any monitor
+;label-unfocused = 
+label-unfocused = %icon%
+label-unfocused-padding = ${self.label-focused-padding}
+label-unfocused-foreground = ${colors.i3-label-unfocused-foreground}
+
+; visible = Active workspace on unfocused monitor
+;label-visible = 
+label-visible = %icon%
+;label-visible-background = ${self.label-focused-background}
+label-visible-foreground = ${colors.i3-label-visible-foreground}
+;label-visible-underline = ${self.label-focused-underline}
+label-visible-padding = ${self.label-focused-padding}
+
+; urgent = Workspace with urgency hint set
+;label-urgent = 
+label-urgent = %icon%
+label-urgent-background = ${colors.i3-label-urgent-background}
+label-urgent-padding = ${self.label-focused-padding}
+
+[module/me]
+type = custom/script
+
+exec = echo ""
+format = <label>
+label = %output%
+label-font = 4
+label-foreground = #FFFFFF
+interval = 9999
+
+[module/cmus]
+type = custom/script
+
+exec = sh ~/.config/polybar/cmus.sh
+
+format = <label>
+label = %output%
+label-font = 4
+label-foreground = ${colors.cmus-foreground}
+exec-if = pgrep -x cmus
+interval = 2
+
+[module/cpu]
+type = internal/cpu
+interval = 2
+format-prefix = "CPU "
+format-prefix-foreground = ${colors.cpu-foreground}
+#format-underline = #f90000
+label = %percentage:2%%
+label-font = 4
+
+[module/temperature-cpu]
+type = internal/temperature
+hwmon-path = /sys/devices/virtual/hwmon/hwmon2/temp1_input
+thermal-zone = 0
+warn-temperature = 60
+
+format = <ramp> <label>
+format-foreground = ${colors.cpu-foreground}
+format-underline = ${colors.background}
+format-warn = <ramp> <label-warn>
+format-warn-underline = ${self.format-underline}
+
+label = %temperature-c%
+label-warn = %temperature-c%
+label-warn-foreground = ${colors.secondary}
+
+ramp-0 = 
+ramp-1 = 
+ramp-2 = 
+ramp-3 = 
+ramp-4 = 
+ramp-5 = 
+ramp-6 = 
+ramp-7 = 
+ramp-foreground = ${colors.cpu-foreground}
+
+[module/memory]
+type = internal/memory
+interval = 10
+format-prefix = "MEM "
+format-prefix-foreground = ${colors.memory-foreground}
+#format-underline = #4bffdc
+label = %percentage_used%%
+label-font = 4
+
+[module/temperature-gpu]
+type = internal/temperature
+hwmon-path = /sys/devices/virtual/hwmon/hwmon2/temp2_input
+thermal-zone = 0
+warn-temperature = 60
+
+format = <ramp> <label>
+format-foreground = ${colors.gpu-foreground}
+format-underline = ${colors.background}
+format-warn = <ramp> <label-warn>
+format-warn-underline = ${self.format-underline}
+
+label = %temperature-c%
+label-warn = %temperature-c%
+label-warn-foreground = ${colors.secondary}
+
+ramp-0 = GPU 
+ramp-1 = GPU 
+ramp-2 = GPU 
+ramp-3 = GPU 
+ramp-4 = GPU 
+ramp-5 = GPU 
+ramp-6 = GPU 
+ramp-7 = GPU 
+ramp-foreground = ${colors.gpu-foreground}
+
+[module/wlan]
+type = internal/network
+interface = wlp5s0
+interval = 3.0
+
+format-connected = <ramp-signal> <label-connected>
+label-connected = %essid%
+;format-connected-underline = #9f78e1
+
+format-disconnected = <label-disconnected>
+label-disconnected = %ifname% disconnected
+label-disconnected-foreground = ${colors.wlan-disconnected-foreground}
+;format-disconnected-underline = ${self.format-connected-underline}
+
+ramp-signal-0 = 
+ramp-signal-1 = 
+ramp-signal-2 = 
+ramp-signal-3 = 
+ramp-signal-4 = 
+ramp-signal-foreground = ${colors.foreground-alt}
+
+[module/eth]
+type = internal/network
+interface = enp4s0
+interval = 3.0
+
+format-connected-underline = #55aa55
+format-connected-prefix = "? "
+format-connected-prefix-foreground = ${colors.foreground-alt}
+label-connected = %local_ip%
+
+format-disconnected =
+;format-disconnected = <label-disconnected>
+;format-disconnected-underline = ${self.format-connected-underline}
+;label-disconnected = %ifname% disconnected
+;label-disconnected-foreground = ${colors.foreground-alt}
+
+[module/date]
+type = internal/date
+interval = 60
+
+date = "  %a %b %d"
+date-alt = "  %Y-%m-%d"
+
+time = %H:%M
+time-alt = %H:%M:%S
+
+#format-prefix = 
+#format-prefix-foreground = ${colors.time-prefix}
+#format-underline = ${colors.time}
+
+label = %date%, %time%
+label-font = 4
+label-foreground = ${colors.time-label-foreground}
+
+[module/volume]
+type = internal/pulseaudio
+
+format-volume = <ramp-volume> <label-volume>
+label-volume = %percentage%%
+label-volume-foreground = ${colors.vol-foreground}
+label-volume-font = 4
+
+format-muted-prefix = " "
+format-muted-foreground = ${colors.vol-muted-foreground}
+label-muted = %percentage%%
+label-muted-font = 4
+ramp-volume-0 = 
+ramp-volume-1 = 
+ramp-volume-2 = 
+
+headphone-soundcard = default
+headphone-id = 16
+headphone-mixer = Headphone
+ramp-headphones-0 = 
+ramp-headphones-1 = 
+
+[module/battery]
+type = internal/battery
+battery = BAT0
+adapter = ADP1
+full-at = 98
+
+format-charging = <ramp-capacity> <label-charging>
+label-charging = %percentage%%
+label-charging-foreground = ${colors.battery-animation-charging}
+label-charging-font = 4
+format-charging-underline = ${colors.full-underline}
+
+format-discharging = <ramp-capacity> <label-discharging>
+label-discharging-font = 4
+#format-discharging-underline = ${colors.discharging-underline}
+
+label-full-font = 4
+#format-full-prefix = "Full "
+format-full-underline = ${colors.full-underline}
+
+ramp-capacity-0 =  Low Battery
+ramp-capacity-1 = 
+ramp-capacity-2 = 
+ramp-capacity-3 = 
+ramp-capacity-4 = 
+#ramp-capacity-foreground= ${colors.battery-ramp-capacity}
+
+[module/powermenu]
+type = custom/menu
+
+expand-right = true
+
+format-spacing = 1
+
+label-open = 
+label-open-foreground = ${colors.menu-open-foreground}
+label-close =  Cancel
+label-close-foreground = ${colors.menu-close-foreground}
+label-separator = -
+label-separator-foreground = ${colors.menu-separator-foreground}
+label-open-font = 4
+label-close-font = 4
+label-separator-font = 4
+
+menu-0-0 = Reboot
+menu-0-0-exec = menu-open-1
+menu-0-1 = Power off
+menu-0-1-exec = menu-open-2
+menu-0-0-foreground = ${colors.menu-reboot-foreground}
+menu-0-1-foreground = ${colors.menu-poweroff-foreground}
+menu-0-0-font = 4
+menu-0-1-font = 4
+
+menu-1-0 = Cancel
+menu-1-0-exec = menu-open-0
+menu-1-1 = Reboot
+menu-1-1-exec = sudo reboot
+menu-1-0-font = 4
+menu-1-1-font = 4
+
+menu-2-0 = Power off
+menu-2-0-exec = sudo poweroff
+menu-2-1 = Cancel
+menu-2-1-exec = menu-open-0
+menu-2-0-font = 4
+menu-2-1-font = 4
+
+[settings]
+screenchange-reload = true
+;compositing-background = xor
+;compositing-background = screen
+;compositing-foreground = source
+;compositing-border = over
+
+[global/wm]
+margin-top = 5
+margin-bottom = 5
+
+; vim:ft=dosini

@@ -1,0 +1,143 @@
+snippet start
+\documentclass[11pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{tikz-cd}
+\usepackage[margin=1in]{geometry}
+\author{Euxhen Hasanaj}
+\title{$1}
+
+\begin{document}
+\maketitle
+$0
+\end{document}
+endsnippet
+
+snippet bold
+\textbf{$1}$0
+endsnippet
+
+snippet italic
+\textit{$1}$0
+endsnippet
+
+snippet cat
+$\cat{A}$$0
+endsnippet
+
+snippet catb
+$\cat{B}$$0
+endsnippet
+
+snippet catop
+$\cat{A}^{\text{op}}$$0
+endsnippet
+
+snippet begin
+\begin{$1}
+    $0
+\end{$1}
+endsnippet
+
+snippet tikz
+\begin{equation*}
+\begin{tikzcd}
+    $1
+\end{tikzcd}
+\end{equation*}
+$0
+endsnippet
+
+snippet enumerate
+\begin{enumerate}[label=(\alph*)]
+    \item $1
+\end{enumerate}
+$0
+endsnippet
+
+snippet dfunc
+\begin{tikzcd}
+    \cat{${1:A}} \arrow[r, shift left, "${3:F}"]\arrow[r, shift right, "${4:G}"'] & \cat{${2:B}}
+\end{tikzcd}
+$0
+endsnippet
+
+snippet nat
+\begin{equation*}
+\begin{tikzcd}
+    \cat{${1:A}}
+    \arrow[rr, bend left=30, "${3:F}"{name=$3}]
+    \arrow[rr, bend right=30, "${4:G}"'{name=$4}]
+    && \cat{${2:B}} \\
+    \arrow[from=$3, Rightarrow, to=$4, "${5:\alpha}", shorten <= 6pt, shorten >= 6pt]
+\end{tikzcd}
+\end{equation*}
+$0
+endsnippet
+
+snippet smallnat
+\begin{equation*}
+\begin{tikzcd}
+    \cat{${1:A}} \arrow[r, bend left=30, "${3:F}"{name=$3}]
+    \arrow[r, bend right=30, "${4:G}"'{name=$4}]
+    & \cat{${2:B}} \\
+    \arrow[from=$3, Rightarrow, to=$4, "${5:\alpha}", shorten <= 3pt, shorten >= 3pt]
+\end{tikzcd}
+\end{equation*}
+$0
+endsnippet
+
+snippet natcompv
+\begin{equation*}
+\begin{tikzcd}
+    \cat{${1:A}}
+    \arrow[rr, bend left=70, "${3:F}"{name=F}]
+    \arrow{rr}[name=G, description]{${4:G}}
+    \arrow[rr, bend right=70, "${5:H}"'{name=H}]
+    && \cat{${2:B}} \
+    \arrow[Rightarrow, from=F, to=G, "${6:\alpha}", shorten <= 3pt, shorten >= 3pt]
+    \arrow[Leftarrow, from=H, to=G, "${7:\beta}"', shorten <= 3pt, shorten >= 3pt]
+\end{tikzcd}
+\end{equation*}
+$0
+endsnippet
+
+snippet natcomph
+\begin{equation*}
+\begin{tikzcd}
+    \cat{${1:A}}
+    \arrow[rr, bend left=30, "${3:F}"{name=F}]
+    \arrow[rr, bend right=30, "${4:G}"'{name=G}]
+    && \cat{$1'} \
+    \arrow[from=F, Rightarrow, to=G, "${5:\alpha}", shorten <= 6pt, shorten >= 6pt]
+    \arrow[rr, bend left=30, "$3'"{name=F'}]
+    \arrow[rr, bend right=30, "$4'"'{name=G'}]
+    && \cat{$1''} \
+    \arrow[from=F', Rightarrow, to=G', "$5'", shorten <= 6pt, shorten >= 6pt]
+\end{tikzcd}
+\end{equation*}
+$0
+endsnippet
+
+snippet square
+\begin{equation*}
+\begin{tikzcd}
+    $1 \arrow[r, "$5"] \arrow[d, "$6"'] & $2 \arrow[d, "$7"] \\\\
+    $3 \arrow[r, "$8"] & $4
+\end{tikzcd}
+\end{equation*}
+$0
+endsnippet
+
+snippet triangle
+\begin{equation*}
+\begin{tikzcd}
+    A \arrow[r, "$1"] \arrow[dr, "$2"] & B \arrow[d, "$3"] \\\\
+    & C
+\end{tikzcd}
+\end{equation*}
+$0
+endsnippet

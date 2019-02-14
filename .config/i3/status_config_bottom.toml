@@ -1,0 +1,27 @@
+icons = "awesome"
+
+[theme]
+name = "bad-wolf"
+
+[[block]]
+block = "custom"
+command = "~/.config/i3/cmus_playing_status.sh"
+interval = 2
+
+[[block]]
+block = "disk_space"
+path = "/"
+alias = "/"
+info_type = "available"
+unit = "GB"
+interval = 20
+
+[[block]]
+block = "cpu"
+interval = 2
+
+[[block]]
+block = "temperature"
+collapsed = false
+interval = 5
+format = "{average}°"
