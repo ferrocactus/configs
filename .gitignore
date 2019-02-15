@@ -17,12 +17,9 @@
 !.config/rofi/
 !.config/termite/
 !.config/youtube-dl.conf
-
 !.fonts/
 !.gitignore
 !.gtkrc-2.0.mine
-!.icons/
-.icons/*/*
 !.octaverc
 !.vim/
 !.vimrc
