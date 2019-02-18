@@ -72,8 +72,8 @@ if s:extfname ==? "tex"
     "inoremap <buffer> <silent> <End>  <C-o>g<End>
 
     " put \begin{} \end{} tags tags around the current word
-    map  <C-B>          I\begin{<End>}<CR>]]<ESC>ko
-    map! <C-B>          <ESC>I\begin{<End>}<CR>]]<ESC>ko
+    map  <C-B>          bi\begin{<End>}<CR>]]<ESC>ko
+    map! <C-B>          <ESC>bi\begin{<End>}<CR>]]<ESC>ko
     "noremap $               a$$<ESC>i
     "noremap! $              <ESC>a$$<ESC>i
     "let g:ycm_key_list_select_completion=['<C-J>']

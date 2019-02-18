@@ -33,7 +33,6 @@ elif [ $1 == "seekp" ]; then
 elif [ $1 == "update" ]; then
     cmus-remote -c -l && \
     cmus-remote -l ~/Music && \
-    cmus-remote -l "MEGAsync Downloads" && \
     cmus-remote -C "view 2" && \
     notify-send "Playlist updated"
 fi

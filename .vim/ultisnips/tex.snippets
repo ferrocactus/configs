@@ -25,15 +25,19 @@ snippet italic
 endsnippet
 
 snippet cat
-$\cat{A}$$0
+$\cat{${1:A}}$$0
 endsnippet
 
-snippet catb
-$\cat{B}$$0
+snippet bcat
+$\bcat{$1}$$0
 endsnippet
 
 snippet catop
-$\cat{A}^{\text{op}}$$0
+$\catop{${1:A}}$$0
+endsnippet
+
+snippet bcatop
+$\bcatop{$1}$$0
 endsnippet
 
 snippet begin
@@ -48,6 +52,13 @@ snippet tikz
     $1
 \end{tikzcd}
 \end{equation*}
+$0
+endsnippet
+
+snippet tikzi
+\begin{tikzcd}
+    $1
+\end{tikzcd}
 $0
 endsnippet
 
