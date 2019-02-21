@@ -23,7 +23,7 @@ export PATH=/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/bin/site_perl:/usr
 
 alias ls='ls --color=auto'
 alias c='clear'
-alias cat='vim ~/AUBG/Spring2019/CategoryTheory/Notes/notes.tex'
+alias category='vim ~/AUBG/Spring2019/CategoryTheory/Notes/notes.tex'
 alias vi='vim'
 alias im='viewnior'
 alias pac='pacman'
