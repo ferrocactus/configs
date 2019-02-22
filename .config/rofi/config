@@ -21,9 +21,9 @@ rofi.padding:                        800
 ! "Always show number of lines" Set from: Default
 ! rofi.fixed-num-lines:                true
 ! "Whether to load and show icons" Set from: Default
-! rofi.show-icons:                     true
+!rofi.show-icons:                     true
 ! "Terminal to use" Set from: Default
-! rofi.terminal:                       rofi-sensible-terminal
+rofi.terminal:                       termite
 ! "Ssh client to use" Set from: Default
 ! rofi.ssh-client:                     ssh
 ! "Ssh command to execute" Set from: Default
@@ -39,7 +39,7 @@ rofi.padding:                        800
 ! "Window fields to match in window mode" Set from: Default
 ! rofi.window-match-fields:            all
 ! "Theme to use to look for icons" Set from: Default
-! rofi.drun-icon-theme:                papirus
+! rofi.drun-icon-theme:                 flat-remix
 ! "Desktop entry fields to match in drun" Set from: Default
 ! rofi.drun-match-fields:              name,generic,exec,categories
 ! "Disable history in run/ssh" Set from: Default
@@ -110,7 +110,7 @@ rofi.color-urgent:                   #00000000, #FFFFFF, #00000000, #00000000, #
 rofi.color-active:                   #00000000, #FFFFFF, #00000000, #00000000, #F08C4D
 ! "Color scheme window" Set from: XResources
 ! original blue
-! rofi.color-window:                   #CC101427, #CC101427, #CC101427
+!rofi.color-window:                   #FF101427, #FF101427, #FF101427
 rofi.color-window:                   #FF11403a, #FF11402a, #FF11402a
 ! "Max history size (WARNING: can cause slowdowns when set to high)." Set from: Default
 ! rofi.max-history-size:               25
