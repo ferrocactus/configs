@@ -3,6 +3,9 @@ Helptags
 filetype plugin indent on
 syntax on
 
+noremap <space> <Nop>
+let mapleader = " "
+
 " theme
 colorscheme gruvbox
 set background=dark
@@ -28,6 +31,14 @@ set completeopt=longest,menuone
 
 " nerd tree mapping
 map <C-n> :NERDTreeToggle<CR>
+" yank all
+map <C-a> ggVG"+y
+map! <C-a> <Esc>ggVG"+y
+
+" one-shot compile
+autocmd filetype cpp nnoremap <leader>k :w <bar> !g++ -ulimit -Wall -Wno-unused-result -Wno-unused-variable -std=c++17 % -o run && ./run <CR>
+autocmd filetype cpp nnoremap <leader>p :w <bar> !./run <CR>
+autocmd filetype py nnoremap <leader>k :w <bar> !python % <CR>
 
 " airline theme
 let g:airline_theme='powerlineish'
@@ -74,8 +85,6 @@ if s:extfname ==? "tex"
     " put \begin{} \end{} tags tags around the current word
     map  <C-B>          bi\begin{<End>}<CR>]]<ESC>ko
     map! <C-B>          <ESC>bi\begin{<End>}<CR>]]<ESC>ko
-    "noremap $               a$$<ESC>i
-    "noremap! $              <ESC>a$$<ESC>i
     "let g:ycm_key_list_select_completion=['<C-J>']
     "let g:ycm_key_list_previous_completion=['<C-K>']
 
@@ -93,10 +102,10 @@ if s:extfname ==? "tex"
     let g:vimtex_complete_ignore_case = 1
     let g:vimtex_complete_close_braces = 1
     imap ]]       <plug>(vimtex-delim-close)
-    nmap <space>l <plug>(vimtex-compile)
-    nmap <space>s <plug>(vimtex-stop)
-    nmap <space>v <plug>(vimtex-view)
-    nmap <space>t <plug>(vimtex-toc-toggle)
+    nmap <localleader>l <plug>(vimtex-compile)
+    nmap <localleader>s <plug>(vimtex-stop)
+    nmap <localleader>v <plug>(vimtex-view)
+    nmap <localleader>t <plug>(vimtex-toc-toggle)
 
     "autocompletion for latex
     if !exists('g:ycm_semantic_triggers')
