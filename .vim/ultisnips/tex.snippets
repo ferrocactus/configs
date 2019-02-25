@@ -33,6 +33,14 @@ snippet image
 $5
 endsnippet
 
+snippet wrapimage
+\begin{wrapfigure}{R}{0.5\textwidth}
+\includegraphics[scale=${2:1}]{$1}
+\caption{$4}\label{img:$3}
+\end{wrapfigure}
+$5
+endsnippet
+
 snippet cat
 $\cat{${1:A}}$$0
 endsnippet
