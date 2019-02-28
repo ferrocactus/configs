@@ -42,7 +42,6 @@ alias matlab-cli='matlab -nodisplay -nojvm -nosplash'
 alias aubg='cd ~/AUBG/Spring2019/'
 alias i3lock='lock'
 alias msfconsole='msfconsole --quiet'
-alias hpd='cd ~/anchor/hostapd-2.6/hostapd/'
 alias eu='function _buff(){g++ $1.cpp && ./a.out};_buff' 
 alias new='function _buff(){cp ~/code/cpp/Codeforces/template.cpp $1.cpp; vim $1.cpp;};_buff'
 

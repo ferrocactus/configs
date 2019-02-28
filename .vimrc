@@ -34,10 +34,26 @@ map <C-n> :NERDTreeToggle<CR>
 " yank all
 map <C-a> ggVG"+y
 map! <C-a> <Esc>ggVG"+y
+" Tab navigation
+nnoremap <C-left>   :tabprevious<CR>
+nnoremap <C-right>  :tabnext<CR>
+nnoremap <C-down>   :tabm -1<CR>
+nnoremap <C-up>     :tabm +1<CR>
+nnoremap <C-t>      :tabnew<CR>:source ~/.vimrc<CR>
+inoremap <C-left>   <Esc>:tabprevious<CR>i
+inoremap <C-right>  <Esc>:tabnext<CR>i
+inoremap <C-down>   :tabm -1<CR>
+inoremap <C-up>     :tabm +1<CR>
+inoremap <C-t>      <Esc>:tabnew<CR>:source ~/.vimrc<CR>
+nnoremap th  :tabfirst<CR>
+nnoremap tl  :tablast<CRr
+nnoremap tt  :tabedit<Space>
+nnoremap tm  :tabm<Space>
+nnoremap td  :tabclose<CR>
 
 " one-shot compile
 autocmd filetype cpp nnoremap <leader>k :w <bar> !g++ -ulimit -Wall -Wno-unused-result -Wno-unused-variable -std=c++17 % -o run && ./run <CR>
-autocmd filetype cpp nnoremap <leader>p :w <bar> !./run <CR>
+autocmd filetype cpp nnoremap <leader>r :w <bar> !./run <CR>
 autocmd filetype py nnoremap <leader>k :w <bar> !python % <CR>
 
 " airline theme

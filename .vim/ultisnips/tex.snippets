@@ -169,3 +169,19 @@ snippet triangle
 \end{equation*}
 $0
 endsnippet
+
+snippet adj
+\begin{equation*}
+\begin{tikzcd}
+    \cat{${1:A}} \arrow[r, shift left=2, "${3:F}"] &
+    \cat{${2:B}} \arrow[l, shift left=2, "${4:G}", "\bot"']
+\end{tikzcd}
+\end{equation*}
+endsnippet
+
+snippet adji
+\begin{tikzcd}
+    \cat{${1:A}} \arrow[r, shift left=2, "${3:F}"] &
+    \cat{${2:B}} \arrow[l, shift left=2, "${4:G}", "\bot"']
+\end{tikzcd}
+endsnippet
