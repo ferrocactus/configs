@@ -6,6 +6,8 @@
 !/.config/cmus/
 /.config/cmus/*
 !/.config/cmus/solarized.theme
+!/.config/cmus/playlists/
+!/.config/cmus/playlists/*
 !/.config/dunst/
 !.config/gtk-3.0/
 !.config/i3/
