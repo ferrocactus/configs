@@ -33,6 +33,13 @@ interval = 5
 format = "{average}°"
 
 [[block]]
+block = "nvidia_gpu"
+label = "GTX 960M"
+show_memory = false
+show_clocks = false
+interval = 5
+
+[[block]]
 block = "net"
 device = "wlp5s0"
 ssid = true

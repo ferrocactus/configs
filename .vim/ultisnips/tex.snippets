@@ -97,10 +97,10 @@ snippet nat
 \begin{equation*}
 \begin{tikzcd}
     \cat{${1:A}}
-    \arrow[rr, bend left=30, "${3:F}"{name=$3}]
-    \arrow[rr, bend right=30, "${4:G}"'{name=$4}]
+    \arrow[rr, bend left=30, "${3:F}"{name=t}]
+    \arrow[rr, bend right=30, "${4:G}"'{name=b}]
     && \cat{${2:B}} \\
-    \arrow[from=$3, Rightarrow, to=$4, "${5:\alpha}", shorten <= 6pt, shorten >= 6pt]
+    \arrow[from=t, Rightarrow, to=b, "${5:\alpha}", shorten <= 6pt, shorten >= 6pt]
 \end{tikzcd}
 \end{equation*}
 $0
@@ -109,10 +109,10 @@ endsnippet
 snippet smallnat
 \begin{equation*}
 \begin{tikzcd}
-    \cat{${1:A}} \arrow[r, bend left=30, "${3:F}"{name=$3}]
-    \arrow[r, bend right=30, "${4:G}"'{name=$4}]
+    \cat{${1:A}} \arrow[r, bend left=30, "${3:F}"{name=t}]
+    \arrow[r, bend right=30, "${4:G}"'{name=b}]
     & \cat{${2:B}} \\
-    \arrow[from=$3, Rightarrow, to=$4, "${5:\alpha}", shorten <= 3pt, shorten >= 3pt]
+    \arrow[from=t, Rightarrow, to=b, "${5:\alpha}", shorten <= 3pt, shorten >= 3pt]
 \end{tikzcd}
 \end{equation*}
 $0
@@ -154,7 +154,7 @@ snippet square
 \begin{equation*}
 \begin{tikzcd}
     $1 \arrow[r, "$5"] \arrow[d, "$6"'] & $2 \arrow[d, "$7"] \\\\
-    $3 \arrow[r, "$8"] & $4
+    $3 \arrow[r, "$8"'] & $4
 \end{tikzcd}
 \end{equation*}
 $0
@@ -184,7 +184,7 @@ snippet adji
 \begin{tikzcd}
     \cat{${1:A}} \arrow[r, shift left=2, "${3:F}"] &
     \cat{${2:B}} \arrow[l, shift left=2, "${4:G}", "\bot"']
-\end{tikzcd} $0
+\end{tikzcd}$0
 endsnippet
 
 snippet equalizer
