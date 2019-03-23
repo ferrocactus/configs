@@ -127,7 +127,7 @@ exec --no-startup-id nm-applet
 exec --no-startup-id xset b off
 exec --no-startup-id feh --bg-scale $wallpaper
 
-assign [class="Firefox"] $ws1
+#assign [class="Firefox"] $ws1
 assign [class="Transmission-gtk"] $ws9
 assign [class="google-musicmanager"] $ws10
 assign [class="Google Play Music Desktop Player"] $ws10
