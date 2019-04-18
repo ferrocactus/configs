@@ -93,14 +93,18 @@ if s:extfname ==? "tex"
     noremap  <buffer> <silent> <Down> gj
     noremap  <buffer> <silent> <Home> g<Home>
     noremap  <buffer> <silent> <End>  g<End>
+    noremap  <buffer> <silent> k   gk
+    noremap  <buffer> <silent> j gj
     "inoremap <buffer> <silent> <Up>   <C-o>gk
     "inoremap <buffer> <silent> <Down> <C-o>gj
     "inoremap <buffer> <silent> <Home> <C-o>g<Home>
     "inoremap <buffer> <silent> <End>  <C-o>g<End>
 
     " put \begin{} \end{} tags tags around the current word
-    map  <C-B>          bi\begin{<End>}<CR>]]<ESC>ko
-    map! <C-B>          <ESC>bi\begin{<End>}<CR>]]<ESC>ko
+    "map  <C-B>          bi\begin{<End>}<CR>]]<ESC>ko
+    "map! <C-B>          <ESC>bi\begin{<End>}<CR>]]<ESC>ko
+    map  <C-B>          bdea\begin{<ESC>po]]<ESC>ko
+    map! <C-B>          <ESC>bdea\begin{<ESC>po]]<ESC>ko
     "let g:ycm_key_list_select_completion=['<C-J>']
     "let g:ycm_key_list_previous_completion=['<C-K>']
 
