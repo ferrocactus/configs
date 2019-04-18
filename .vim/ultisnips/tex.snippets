@@ -95,8 +95,8 @@ endsnippet
 snippet nat
 \begin{tikzcd}
     \cat{${1:A}}
-    \arrow[rr, bend left=30, "${3:F}"{name=t}]
-    \arrow[rr, bend right=30, "${4:G}"'{name=b}]
+    \arrow[rr, bend left=30, sloped, "${3:F}"{name=t}]
+    \arrow[rr, bend right=30, sloped, "${4:G}"'{name=b}]
     && \cat{${2:B}} \\
     \arrow[from=t, Rightarrow, to=b, "${5:\alpha}", shorten <= 6pt, shorten >= 6pt]
 \end{tikzcd}$0
@@ -104,8 +104,8 @@ endsnippet
 
 snippet smallnat
 \begin{tikzcd}
-    \cat{${1:A}} \arrow[r, bend left=30, "${3:F}"{name=t}]
-    \arrow[r, bend right=30, "${4:G}"'{name=b}]
+    \cat{${1:A}} \arrow[r, bend left=30, sloped, "${3:F}"{name=t}]
+    \arrow[r, bend right=30, sloped, "${4:G}"'{name=b}]
     & \cat{${2:B}} \\
     \arrow[from=t, Rightarrow, to=b, "${5:\alpha}", shorten <= 3pt, shorten >= 3pt]
 \end{tikzcd}$0

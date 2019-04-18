@@ -126,6 +126,7 @@ client.focused          #ff7899 #ff5577 #ffffff #dfbd8a #877857
 exec --no-startup-id nm-applet
 exec --no-startup-id xset b off
 exec --no-startup-id feh --bg-scale $wallpaper
+exec --no-startup-id xset r rate 400 30
 
 #assign [class="Firefox"] $ws1
 assign [class="Transmission-gtk"] $ws9
