@@ -10,7 +10,7 @@ set $bg-color #203139
 set $text-color $white
 
 set $path ~/.config/i3
-set $wallpaper ~/Pictures/chinese.jpg
+set $wallpaper ~/Pictures/minimalist_snow.jpg
 
 set $mod Mod4
 

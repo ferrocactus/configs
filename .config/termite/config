@@ -44,8 +44,8 @@ foreground_bold = #ffffff
 #background = rgba(53, 9, 0, 0.8)
 # green/blue
 #background = rgba(8, 38, 45, 1)
-#background = rgba(29, 54, 43, 1)
-background = rgba(50, 50, 50, 1)
+background = rgba(29, 54, 63, 1)
+#background = rgba(50, 50, 50, 1)
 
 # if unset, will reverse foreground and background
 #highlight = #2f2f2f

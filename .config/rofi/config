@@ -111,7 +111,7 @@ rofi.color-active:                   #00000000, #FFFFFF, #00000000, #00000000, #
 ! "Color scheme window" Set from: XResources
 ! original blue
 !rofi.color-window:                   #FF101427, #FF101427, #FF101427
-rofi.color-window:                   #FF11403a, #FF11402a, #FF11402a
+rofi.color-window:                   #FF11404A, #FF11402A, #FF11402A
 ! "Max history size (WARNING: can cause slowdowns when set to high)." Set from: Default
 ! rofi.max-history-size:               25
 ! "Hide the prefix mode prefix on the combi view." Set from: Default
