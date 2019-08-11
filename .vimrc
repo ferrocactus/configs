@@ -31,9 +31,9 @@ set completeopt=longest,menuone
 
 " nerd tree mapping
 map <C-n> :NERDTreeToggle<CR>
-" yank all
-map <C-a> ggVG"+y
-map! <C-a> <Esc>ggVG"+y
+" select all
+map <C-a> ggVG
+map! <C-a> <Esc>ggVG
 " Tab navigation
 nnoremap <C-left>   :tabprevious<CR>
 nnoremap <C-right>  :tabnext<CR>
