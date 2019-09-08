@@ -15,6 +15,9 @@ zstyle :compinstall filename '/home/zekrom/.zshrc'
 autoload -Uz compinit
 compinit
 
+plugins=(... docker docker-compose
+)
+
 PS1="%{$fg[green]%}%n%{$reset_color%} %{$fg[yellow]%}%2~ %{$reset_color%}% "
 autoload -U colors && colors
 
@@ -46,5 +49,7 @@ alias i3lock='lock'
 alias msfconsole='msfconsole --quiet'
 alias eu='function _buff(){g++ $1.cpp && ./a.out};_buff' 
 alias new='function _buff(){cp ~/code/cpp/Codeforces/template.cpp $1.cpp; vim $1.cpp;};_buff'
+alias dok='function _buff(){docker run -it --rm -v $1:/home/dzekrom/mounted:rw --gpus all};_buff'
+alias dokjup='function _buff(){docker run -it --rm -v $1:/home/dzekrom/mounted:rw --gpus all -p 8888:8888 tf jupyter notebook --ip=0.0.0.0 --no-browser};_buff'
 
 source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh

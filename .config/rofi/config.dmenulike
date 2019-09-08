@@ -1,23 +1,24 @@
-rofi.font:          SFNS Display 16
+rofi.font:          SFNS Display 12
 rofi.modi:          drun,run,window,ssh
-rofi.lines:         10
+rofi.lines:         1
+rofi.columns:       15
 rofi.line-padding:  0
-rofi.bw:            3
-rofi.padding:       15
-rofi.width:         40
+rofi.bw:            0
+rofi.padding:       35
+rofi.width:         100
 rofi.drun-icon-theme:                flat-remix
 rofi.separator-style:                none
 rofi.hide-scrollbar:                 true
 rofi.show-match:                     false
-rofi.location:      0
+rofi.location:      1
 rofi.yoffset:       25
 #                       #odd col  #font non-sel  #even col  #sel col #sel font
 rofi.color-normal:          #00141F27, #ffffff, #00141F27, #00141F27, #f08c4d
 rofi.color-urgent:          #00000000, #FFFFFF, #00000000, #00000000, #F08C4D
 rofi.color-active:          #00000000, #FFFFFF, #00000000, #00000000, #F08C4D
 !rofi.color-window:          #FF101427, #FF101427, #FF101427
-#                          #bg          #border
-rofi.color-window:          #FF1D363F, #FF31606A, #FF11402A
+#                          #bg
+rofi.color-window:          #FF1E2B24, #0F11402A, #FF11402A
 
 ! "Enabled modi" Set from: Default
 ! rofi.modi:                           window,run,ssh

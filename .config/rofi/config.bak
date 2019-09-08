@@ -1,40 +1,19 @@
-rofi.font:          SFNS Display 16
-rofi.modi:          drun,run,window,ssh
-rofi.lines:         10
-rofi.line-padding:  0
-rofi.bw:            3
-rofi.padding:       15
-rofi.width:         40
-rofi.drun-icon-theme:                flat-remix
-rofi.separator-style:                none
-rofi.hide-scrollbar:                 true
-rofi.show-match:                     false
-rofi.location:      0
-rofi.yoffset:       25
-#                       #odd col  #font non-sel  #even col  #sel col #sel font
-rofi.color-normal:          #00141F27, #ffffff, #00141F27, #00141F27, #f08c4d
-rofi.color-urgent:          #00000000, #FFFFFF, #00000000, #00000000, #F08C4D
-rofi.color-active:          #00000000, #FFFFFF, #00000000, #00000000, #F08C4D
-!rofi.color-window:          #FF101427, #FF101427, #FF101427
-#                          #bg          #border
-rofi.color-window:          #FF1D363F, #FF31606A, #FF11402A
-
 ! "Enabled modi" Set from: Default
 ! rofi.modi:                           window,run,ssh
 ! "Window width" Set from: Default
-! rofi.width:         40
+rofi.width:                          100
 ! "Number of lines" Set from: Default
-!rofi.lines:                          5
+rofi.lines:                          5
 ! "Number of columns" Set from: Default
 ! rofi.columns:                        1
 ! "Font to use" Set from: Default
-!rofi.font:                           SFNS Display 22
+rofi.font:                           SFNS Display 22
 ! "Border width" Set from: Default
 ! rofi.bw:                             1
 ! "Location on screen" Set from: Default
 ! rofi.location:                       0
 ! "Padding" Set from: Default
-! rofi.padding:       200
+rofi.padding:                        800
 ! "Y-offset relative to location" Set from: Default
 ! rofi.yoffset:                        0
 ! "X-offset relative to location" Set from: Default
@@ -44,7 +23,7 @@ rofi.color-window:          #FF1D363F, #FF31606A, #FF11402A
 ! "Whether to load and show icons" Set from: Default
 !rofi.show-icons:                     true
 ! "Terminal to use" Set from: Default
-!rofi.terminal:                       termite
+rofi.terminal:                       termite
 ! "Ssh client to use" Set from: Default
 ! rofi.ssh-client:                     ssh
 ! "Ssh command to execute" Set from: Default
@@ -76,13 +55,13 @@ rofi.color-window:          #FF1D363F, #FF31606A, #FF11402A
 ! "Enable sidebar-mode" Set from: Default
 ! rofi.sidebar-mode:                   false
 ! "Row height (in chars)" Set from: Default
-!rofi.eh:                             2
+rofi.eh:                             2
 ! "Enable auto select mode" Set from: Default
 ! rofi.auto-select:                    false
 ! "Parse hosts file for ssh mode" Set from: Default
 ! rofi.parse-hosts:                    false
 ! "Parse known_hosts file for ssh mode" Set from: Default
-! rofi.parse-known-hosts:              true
+ rofi.parse-known-hosts:              true
 ! "Set the modi to combine in combi mode" Set from: Default
 ! rofi.combi-modi:                     window,run
 ! "Set the matching algorithm. (normal, regex, glob, fuzzy)" Set from: Default
@@ -98,9 +77,9 @@ rofi.color-window:          #FF1D363F, #FF31606A, #FF11402A
 ! "Pre-set filter" Set from: Default
 ! rofi.filter:                         
 ! "Separator style (none, dash, solid) *DEPRECATED*" Set from: Default
-!rofi.separator-style:                none
+rofi.separator-style:                none
 ! "Hide scroll-bar *DEPRECATED*" Set from: Default
-!rofi.hide-scrollbar:                 true
+rofi.hide-scrollbar:                 true
 ! "Fullscreen" Set from: Default
 ! rofi.fullscreen:                     false
 ! "Fake transparency *DEPRECATED*" Set from: Default
@@ -120,19 +99,19 @@ rofi.color-window:          #FF1D363F, #FF31606A, #FF11402A
 ! "Click outside the window to exit" Set from: Default
 ! rofi.click-to-exit:                  true
 ! "Indicate how it match by underlining it." Set from: Default
-!rofi.show-match:                     false
+rofi.show-match:                     false
 ! "New style theme file" Set from: Default
 ! rofi.theme:                          
 ! "Color scheme for normal row" Set from: XResources
-!rofi.color-normal:                   #00141F27, #FFFFFF, #00141F27, #00141F27, #F08C4D
+rofi.color-normal:                   #00141F27, #FFFFFF, #00141F27, #00141F27, #F08C4D
 ! "Color scheme for urgent row" Set from: XResources
-!rofi.color-urgent:                   #00000000, #FFFFFF, #00000000, #00000000, #F08C4D
+rofi.color-urgent:                   #00000000, #FFFFFF, #00000000, #00000000, #F08C4D
 ! "Color scheme for active row" Set from: XResources
-!rofi.color-active:                   #00000000, #FFFFFF, #00000000, #00000000, #F08C4D
+rofi.color-active:                   #00000000, #FFFFFF, #00000000, #00000000, #F08C4D
 ! "Color scheme window" Set from: XResources
 ! original blue
 !rofi.color-window:                   #FF101427, #FF101427, #FF101427
-!rofi.color-window:                   #FF11404A, #FF11402A, #FF11402A
+rofi.color-window:                   #FF11404A, #FF11402A, #FF11402A
 ! "Max history size (WARNING: can cause slowdowns when set to high)." Set from: Default
 ! rofi.max-history-size:               25
 ! "Hide the prefix mode prefix on the combi view." Set from: Default
