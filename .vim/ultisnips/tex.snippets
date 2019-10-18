@@ -1,14 +1,12 @@
 snippet start
 \documentclass[11pt,a4paper]{article}
 \usepackage[utf8]{inputenc}
-\usepackage{amsmath}
-\usepackage{amsfonts}
-\usepackage{amssymb}
-\usepackage{graphicx}
-\usepackage{tikz-cd}
+\usepackage{amsmath, amsfonts, amssymb, graphicx}
+\usepackage{enumitem, tikz-cd}
 \usepackage[margin=1in]{geometry}
 \author{Euxhen Hasanaj}
 \title{$1}
+\date{}
 
 \begin{document}
 \maketitle
@@ -84,6 +82,16 @@ snippet enumerate
     \item $1
 \end{enumerate}
 $0
+endsnippet
+
+snippet branch
+\[
+$1 = \left\\{
+\begin{array}{ll}
+    $2
+\end{array}
+\right.
+\]
 endsnippet
 
 snippet dfunc

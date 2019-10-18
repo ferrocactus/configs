@@ -66,6 +66,7 @@ let delimitMate_jump_expansion = 1
 
 "save as root from within vim using :Sw
 command! -nargs=0 Sw w !sudo tee % > /dev/null
+map <leader>cc :silent !{termite& -d `pwd`}<CR>
 imap jk <Esc>
 
 "snippets

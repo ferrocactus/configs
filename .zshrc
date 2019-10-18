@@ -45,6 +45,7 @@ alias cltrash='rm -rf ~/.local/share/Trash/files/* && rm -rf ~/.local/share/Tras
 alias sudocltrash='sudo rm -rf ~/.local/share/Trash/files/* && sudo rm -rf ~/.local/share/Trash/info/* && sudo rm -rf ~/.local/share/Trash/files/.*'
 alias matlab-cli='matlab -nodisplay -nojvm -nosplash'
 alias cmu='cd ~/CMU/Fall2019/'
+alias hw='cd ~/CMU/Fall2019/10715\ -\ Advanced\ Introduction\ to\ Machine\ Learning/HW/HW2/'
 alias i3lock='lock'
 alias msfconsole='msfconsole --quiet'
 alias eu='function _buff(){g++ $1.cpp && ./a.out};_buff' 
