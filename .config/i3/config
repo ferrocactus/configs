@@ -10,14 +10,14 @@ set $bg-color #203139
 set $text-color $white
 
 set $path ~/.config/i3
-set $wallpaper ~/Pictures/krobelus.jpg
+set $wallpaper ~/Pictures/abstract.jpg
 
 set $mod Mod4
 
 font pango:System San Francisco 14
 
 bindsym $mod+shift+x exec --no-startup-id ~/scripts/lock
-for_window [class="^.*"] border pixel 8
+for_window [class="^.*"] border pixel 4
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -133,12 +133,15 @@ bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'Do you want to exit i3?' -b 'Yes, exit i3' 'i3-msg exit'"
 
-client.focused          #ff7899 #ff5577 #ffffff #dfbd8a #877857
+#client.focused          #ff7899 #ff5577 #ffffff #dfbd8a #877857
+client.focused          #ff7899 #ff5577 #ffffff #307070 #305050
+client.focused_inactive #ff7899 #ff5577 #ffffff #203030 #203030
 
 # User defined
 exec --no-startup-id nm-applet
 exec --no-startup-id xset b off
-exec --no-startup-id feh --bg-scale $wallpaper
+#exec --no-startup-id feh --bg-scale $wallpaper
+exec --no-startup-id xsetroot -solid "202020"
 exec --no-startup-id xset r rate 400 30
 exec --no-startup-id artha
 
@@ -177,12 +180,20 @@ bar {
     position top
     status_command /usr/bin/i3status-rs $path/status_config_top.toml
     colors {
+#separator #222222
+#background #1E2B24
+#background #202020
+#statusline #222222
+#focused_workspace #000088CC #497252 #ffffff
+#active_workspace #333333 #333333 #ffffff
+#inactive_workspace #333333 #333333 #888888
+#urgent_workspace #2f343a #900000 #ffffff
         separator #222222
-        background #1E2B24
+        background #202020
         statusline #222222
-        focused_workspace #000088CC #497252 #ffffff
-        active_workspace #333333 #333333 #ffffff
-        inactive_workspace #333333 #333333 #888888
+        focused_workspace #202020 #202020 #ffffff
+        active_workspace #202020 #202020 #ffffff
+        inactive_workspace #202020 #202020 #555555
         urgent_workspace #2f343a #900000 #ffffff
     }
 }

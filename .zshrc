@@ -22,7 +22,8 @@ PS1="%{$fg[green]%}%n%{$reset_color%} %{$fg[yellow]%}%2~ %{$reset_color%}% "
 autoload -U colors && colors
 
 export EDITOR='vim'
-export PATH=/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl:~/scripts
+export PATH=/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl:/opt/cuda/bin:~/scripts
+export LD_LIBRARY_PATH=/opt/cuda/lib64 #CUDA
 
 alias ls='ls --color=auto'
 alias c='clear'
@@ -45,7 +46,6 @@ alias cltrash='rm -rf ~/.local/share/Trash/files/* && rm -rf ~/.local/share/Tras
 alias sudocltrash='sudo rm -rf ~/.local/share/Trash/files/* && sudo rm -rf ~/.local/share/Trash/info/* && sudo rm -rf ~/.local/share/Trash/files/.*'
 alias matlab-cli='matlab -nodisplay -nojvm -nosplash'
 alias cmu='cd ~/CMU/Fall2019/'
-alias hw='cd ~/CMU/Fall2019/10715\ -\ Advanced\ Introduction\ to\ Machine\ Learning/HW/HW2/'
 alias i3lock='lock'
 alias msfconsole='msfconsole --quiet'
 alias eu='function _buff(){g++ $1.cpp && ./a.out};_buff' 
