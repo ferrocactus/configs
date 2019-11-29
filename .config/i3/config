@@ -141,7 +141,7 @@ client.focused_inactive #ff7899 #ff5577 #ffffff #203030 #203030
 exec --no-startup-id nm-applet
 exec --no-startup-id xset b off
 #exec --no-startup-id feh --bg-scale $wallpaper
-exec --no-startup-id xsetroot -solid "202020"
+exec --no-startup-id xsetroot -solid "#202020"
 exec --no-startup-id xset r rate 400 30
 exec --no-startup-id artha
 
