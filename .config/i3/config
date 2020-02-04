@@ -10,7 +10,7 @@ set $bg-color #203139
 set $text-color $white
 
 set $path ~/.config/i3
-set $wallpaper ~/Pictures/abstract.jpg
+set $wallpaper ~/Pictures/minimalist_2.jpg
 
 set $mod Mod4
 
@@ -140,8 +140,8 @@ client.focused_inactive #ff7899 #ff5577 #ffffff #203030 #203030
 # User defined
 exec --no-startup-id nm-applet
 exec --no-startup-id xset b off
-#exec --no-startup-id feh --bg-scale $wallpaper
-exec --no-startup-id xsetroot -solid "#202020"
+exec --no-startup-id feh --bg-scale $wallpaper
+#exec --no-startup-id xsetroot -solid "#202020"
 exec --no-startup-id xset r rate 400 30
 exec --no-startup-id artha
 
@@ -189,7 +189,7 @@ bar {
 #inactive_workspace #333333 #333333 #888888
 #urgent_workspace #2f343a #900000 #ffffff
         separator #222222
-        background #202020
+        background #0F1418
         statusline #222222
         focused_workspace #202020 #202020 #ffffff
         active_workspace #202020 #202020 #ffffff
