@@ -51,6 +51,14 @@ nnoremap tt  :tabedit<Space>
 nnoremap tm  :tabm<Space>
 nnoremap td  :tabclose<CR>
 
+" remove trailing whitespace on save
+fun! TrimWhitespace()
+    let l:save = winsaveview()
+    keeppatterns %s/\s\+$//e
+    call winrestview(l:save)
+endfun
+autocmd BufWritePre * :call TrimWhitespace()
+
 " one-shot compile
 autocmd filetype cpp nnoremap <leader>k :w <bar> !g++ -ulimit -Wall -Wno-unused-result -Wno-unused-variable -std=c++17 % -o run && ./run <CR>
 autocmd filetype cpp nnoremap <leader>r :w <bar> !./run <CR>
@@ -98,10 +106,6 @@ if s:extfname ==? "tex"
     noremap  <buffer> <silent> <End>  g<End>
     noremap  <buffer> <silent> k   gk
     noremap  <buffer> <silent> j gj
-    "inoremap <buffer> <silent> <Up>   <C-o>gk
-    "inoremap <buffer> <silent> <Down> <C-o>gj
-    "inoremap <buffer> <silent> <Home> <C-o>g<Home>
-    "inoremap <buffer> <silent> <End>  <C-o>g<End>
 
     " put \begin{} \end{} tags tags around the current word
     "map  <C-B>          bi\begin{<End>}<CR>]]<ESC>ko
