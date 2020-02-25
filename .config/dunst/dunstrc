@@ -244,7 +244,8 @@
 	#background = "#0375B4"  #starry night
 	#nelly green
 	#background = "#29bf12"
-    background = "#028482"
+        #background = "#028482"
+        background = "#451E3E"
 	#background = "#05666B"  #bg green
 	#background = "#00AFB7"  #sky
 	#japanese indigo
@@ -260,11 +261,12 @@
 [urgency_normal]
 	#yellow
 	#background = "#FFD400"
-	#background = "#91C7B1"  
+	#background = "#91C7B1"
 	#cyanish
 	#caribbean green
-	#background = "#03CEA4"  
-	background = "#993366"  
+	#background = "#03CEA4"
+#background = "#993366"
+        background = "#651E3E"
 	#foreground = "#54494B"  #dark grey
 	#foreground = "#454545"  #outer space
 	#falu red
