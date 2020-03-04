@@ -15,8 +15,7 @@ zstyle :compinstall filename '/home/zekrom/.zshrc'
 autoload -Uz compinit
 compinit
 
-plugins=(... docker docker-compose
-)
+#plugins=(... docker docker-compose)
 
 PS1="%{$fg[green]%}%n%{$reset_color%} %{$fg[yellow]%}%2~ %{$reset_color%}% "
 autoload -U colors && colors
