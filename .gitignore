@@ -23,7 +23,8 @@
 !.gitignore
 !.gtkrc-2.0.mine
 !.octaverc
-!.vim/
+!.vim
+.vim/bundle/AutoComplPop
 !.vimrc
 !.xinitrc
 !.zshrc
