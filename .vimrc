@@ -116,6 +116,7 @@ if s:extfname ==? "tex"
     "let g:ycm_key_list_previous_completion=['<C-K>']
 
     let g:vimtex_mappings_enabled = 0
+    let g:vimtex_delim_stopline = 0
     let g:LatexBox_split_type = "new"
     " qpdfview will highlight changes
     let g:vimtex_view_general_viewer = 'qpdfview'
