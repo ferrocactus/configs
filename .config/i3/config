@@ -8,25 +8,43 @@ set $orange #EE7600
 set $blue #003366
 set $bg-color #203139
 set $text-color $white
-
 set $path ~/.config/i3
-set $wallpaper ~/Pictures/minimalist_2.jpg
-
-set $mod Mod4
+set $wallpaper ~/Pictures/orangeuniverse.png
 
 font pango:System San Francisco 14
-
-bindsym $mod+shift+x exec --no-startup-id ~/scripts/lock
+set $mod Mod4
 for_window [class="^.*"] border pixel 4
 
-# Use Mouse+$mod to drag floating windows to their wanted position
-floating_modifier $mod
+# Startup
+exec --no-startup-id nm-applet
+exec --no-startup-id xset b off
+exec --no-startup-id feh --bg-scale $wallpaper
+exec --no-startup-id xset r rate 400 30
+exec --no-startup-id artha
 
-bindsym $mod+Return exec termite
-bindsym $mod+Shift+Return exec tilda
+floating_modifier $mod
 bindsym $mod+Shift+q kill
+bindsym $mod+Shift+c reload
+bindsym $mod+Shift+r restart
+
+bindsym $mod+shift+x exec --no-startup-id ~/scripts/lock
+bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'Do you want to exit i3?'\
+            -b 'Yes, exit i3' 'i3-msg exit'"
+bindsym $mod+Return exec termite
 bindsym $mod+d exec --no-startup-id rofi -show run
-#bindsym $mod+d exec --no-startup-id dmenu_run -fn "-systemsanfrancisco-r-*-*-16-*"
+#bindsym $mod+d exec --no-startup-id dmenu_run -dim .4 -h 30 -sf "#FF7F50"\
+#           -sb "#222222" -nb "#222222" -fn "-systemsanfrancisco-r-*-*-16-*"
+bindsym $mod+y exec --no-startup-id $path/youtube-dl.sh other
+bindsym Print exec --no-startup-id maim ~/Pictures/Screenshots/$(date +%s).png && \
+            notify-send 'Screenshot Captured'
+bindsym $mod+Print exec --no-startup-id maim -s ~/Pictures/Screenshots/$(date +%s).png && notify-send 'Window Screenshot Captured'
+
+#assign [class="Firefox"] $ws1
+assign [class="Transmission-gtk"] $ws9
+assign [class="Slack"] $ws9
+assign [class="google-musicmanager"] $ws10
+assign [class="Google Play Music Desktop Player"] $ws10
+for_window [class="cmus"] move workspace 10
 
 # change focus
 bindsym $mod+j focus left
@@ -34,7 +52,6 @@ bindsym $mod+k focus down
 bindsym $mod+l focus up
 bindsym $mod+semicolon focus right
 
-# alternatively, you can use the cursor keys:
 bindsym $mod+Left focus left
 bindsym $mod+Down focus down
 bindsym $mod+Up focus up
@@ -46,40 +63,28 @@ bindsym $mod+Shift+k move down
 bindsym $mod+Shift+l move up
 bindsym $mod+Shift+semicolon move right
 
-# alternatively, you can use the cursor keys:
 bindsym $mod+Shift+Left move left
 bindsym $mod+Shift+Down move down
 bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
 
-# split in horizontal orientation
 bindsym $mod+h split h
-
-# split in vertical orientation
 bindsym $mod+v split v
-
-# enter fullscreen mode for the focused container
 bindsym $mod+f fullscreen toggle
 
-# change container layout (stacked, tabbed, toggle split)
 bindsym $mod+s layout stacking
 bindsym $mod+w layout tabbed
 bindsym $mod+e layout toggle split
-
-# toggle tiling / floating
 bindsym $mod+Shift+space floating toggle
-
 # change focus between tiling / floating windows
 bindsym $mod+space focus mode_toggle
 
 # focus the parent container
-bindsym $mod+a focus parent
-
+#bindsym $mod+a focus parent
 # focus the child container
 #bindsym $mod+d focus child
 
-# Define names for default workspaces for which we configure key bindings later on.
-# We use variables to avoid repeating the names in multiple places.
+# Define names for default workspaces.
 set $ws1 "1"
 set $ws2 "2"
 set $ws3 "3"
@@ -115,48 +120,19 @@ bindsym $mod+Shift+8 move container to workspace $ws8
 bindsym $mod+Shift+9 move container to workspace $ws9
 bindsym $mod+Shift+0 move container to workspace $ws10
 
-workspace 1 output primary
-workspace 2 output primary
-workspace 3 output primary
-workspace 4 output primary
-workspace 5 output primary
-workspace 6 output HDMI-1
-workspace 7 output HDMI-1
-workspace 8 output HDMI-1
-workspace 9 output HDMI-1
-workspace 0 output HDMI-1
+#workspace 1 output primary
+#workspace 2 output primary
+#workspace 3 output primary
+#workspace 4 output primary
+#workspace 5 output primary
+#workspace 6 output HDMI-1
+#workspace 7 output HDMI-1
+#workspace 8 output HDMI-1
+#workspace 9 output HDMI-1
+#workspace 0 output HDMI-1
 
-# reload the configuration file
-bindsym $mod+Shift+c reload
-# restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
-bindsym $mod+Shift+r restart
-# exit i3 (logs you out of your X session)
-bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'Do you want to exit i3?' -b 'Yes, exit i3' 'i3-msg exit'"
-
-#client.focused          #ff7899 #ff5577 #ffffff #dfbd8a #877857
-client.focused          #ff7899 #ff5577 #ffffff #307070 #305050
+client.focused          #ff7899 #ff5577 #ffffff #b0a070 #305050
 client.focused_inactive #ff7899 #ff5577 #ffffff #203030 #203030
-
-# User defined
-exec --no-startup-id nm-applet
-exec --no-startup-id xset b off
-exec --no-startup-id feh --bg-scale $wallpaper
-#exec --no-startup-id xsetroot -solid "#202020"
-exec --no-startup-id xset r rate 400 30
-exec --no-startup-id artha
-
-#assign [class="Firefox"] $ws1
-assign [class="Transmission-gtk"] $ws9
-assign [class="Slack"] $ws9
-assign [class="google-musicmanager"] $ws10
-assign [class="Google Play Music Desktop Player"] $ws10
-for_window [class="cmus"] move workspace 10
-
-bindsym $mod+y exec --no-startup-id $path/youtube-dl.sh other
-
-bindsym Print exec --no-startup-id maim ~/Pictures/Screenshots/$(date +%s).png && \
-            notify-send 'Screenshot Captured'
-bindsym $mod+Print exec --no-startup-id maim -s ~/Pictures/Screenshots/$(date +%s).png && notify-send 'Window Screenshot Captured'
 
 mode "resize" {
         bindsym j resize shrink width 10 px or 10 ppt
@@ -187,46 +163,26 @@ bar {
 #active_workspace #333333 #333333 #ffffff
 #inactive_workspace #333333 #333333 #888888
 #urgent_workspace #2f343a #900000 #ffffff
+        set $barbg #1C1C1C
         separator #222222
-        background #0F1418
+        background $barbg
         statusline #222222
-        focused_workspace #202020 #202020 #ffffff
-        active_workspace #202020 #202020 #ffffff
-        inactive_workspace #202020 #202020 #555555
+        focused_workspace $barbg $barbg #ffffff
+        active_workspace $barbg $barbg #ffffff
+        inactive_workspace $barbg $barbg #555555
         urgent_workspace #2f343a #900000 #ffffff
     }
 }
 
-#bar {
-#    font pango:DejaVu Sans Mono, FontAwesome 12
-#    position bottom
-#    workspace_buttons no
-#    status_command /usr/bin/i3status-rs $path/status_config_bottom.toml
-#    colors {
-#        separator #222222
-#        background #222222
-#        statusline #222222
-#        focused_workspace #0088CC #0088CC #ffffff
-#        active_workspace #333333 #333333 #ffffff
-#        inactive_workspace #333333 #333333 #888888
-#        urgent_workspace #2f343a #900000 #ffffff
-#    }
-#}
-
 bindsym $mod+r mode "resize"
 
 # Sound controls
-#bindsym XF86AudioRaiseVolume exec --no-startup-id amixer sset Master 4+
-#bindsym XF86AudioLowerVolume exec --no-startup-id amixer sset Master 4-
 bindsym XF86AudioMute exec --no-startup-id amixer set Master toggle
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5%
 bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5%
-#bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle
 # Sreen brightness controls
 bindsym XF86MonBrightnessUp exec light -A 5 && notify-send `light -G`
 bindsym XF86MonBrightnessDown exec light -U 5 && notify-send `light -G`
-
-#bindsym XF86Search exec --no-startup-id rofi -show run
 
 # ***************   cmus   ****************
 # Media player controls

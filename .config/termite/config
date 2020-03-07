@@ -10,46 +10,25 @@ clickable_url = true
 font = Monaco 12
 scrollback_lines = 10000
 search_wrap = true
+browser = firefox
 #icon_name = terminal
 #geometry = 640x480
 
 # "system", "on" or "off"
 cursor_blink = off
-
 # "block", "underline" or "ibeam"
 cursor_shape = block
-
-# $BROWSER is used by default if set, with xdg-open as a fallback
-browser = firefox
-
 # set size hints for the window
 #size_hints = false
-
 # Hide links that are no longer valid in url select overlay mode
 filter_unmatched_urls = true
-
 # emit escape sequences for extra modified keys
 #modify_other_keys = false
 
 [colors]
-#cursor = #AA0000
-#cursor_foreground = #AAAAAA
 foreground = #ffffff
 foreground_bold = #ffffff
-#background = #3f3f3f
-
-# 20% background transparency (requires a compositor)
-#background = rgba(0, 57, 60, 0.8)
-# red
-#background = rgba(53, 9, 0, 0.8)
-# green/blue
-#background = rgba(8, 38, 45, 1)
-#background = rgba(29, 54, 63, 1)
-#background = rgba(50, 50, 50, 1)
-#background = rgba(30, 45, 36, 1) # green
-#background = rgba(55, 39, 49, 1) # dark purple
 background = rgba(40, 40, 40, 1)
-
 
 # if unset, will reverse foreground and background
 #highlight = #2f2f2f
