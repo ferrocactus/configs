@@ -91,6 +91,15 @@ let g:UltiSnipsJumpForwardTrigger = "<C-L>"
 let g:UltiSnipsJumpBackwardTrigger = "<C-J>"
 let g:UltiSnipsEditSplit = "vertical"
 
+"formatting
+noremap <buffer> <C-I> :Autoformat<CR>
+let g:autopep8_cmd = $HOME."/code/py3.8/bin/autopep8"
+autocmd FileType python noremap <buffer> <C-I> :call Autopep8()<CR>
+let g:autopep8_max_line_length=80
+let g:autopep8_indent_size=4
+let g:autopep8_disable_show_diff=1
+let g:autopep8_on_save = 1
+
 "latex options
 let s:extfname = expand("%:e")
 if s:extfname ==? "tex"
@@ -121,7 +130,7 @@ if s:extfname ==? "tex"
     " qpdfview will highlight changes
     let g:vimtex_view_general_viewer = 'qpdfview'
     let g:vimtex_view_general_options
-        \ = '--unique @pdf\#src:@tex:@line:@col'
+                \ = '--unique @pdf\#src:@tex:@line:@col'
     let g:vimtex_view_general_options_latexmk = '--unique'
     " unset space function to make localleader easier
     noremap <space> <Nop>
@@ -145,14 +154,14 @@ endif
 "Configure the cursor to become a thin line when in insert mode
 "and block when in normal mode
 if has("autocmd")
-  au VimEnter,InsertLeave * silent execute '!echo -ne "\e[2 q"' | redraw!
-  au InsertEnter,InsertChange *
-\ if v:insertmode == 'i' |
-\   silent execute '!echo -ne "\e[6 q"' | redraw! |
-\ elseif v:insertmode == 'r' |
-\   silent execute '!echo -ne "\e[4 q"' | redraw! |
-\ endif
-au VimLeave * silent execute '!echo -ne "\e[ q"' | redraw!
+    au VimEnter,InsertLeave * silent execute '!echo -ne "\e[2 q"' | redraw!
+    au InsertEnter,InsertChange *
+                \ if v:insertmode == 'i' |
+                \   silent execute '!echo -ne "\e[6 q"' | redraw! |
+                \ elseif v:insertmode == 'r' |
+                \   silent execute '!echo -ne "\e[4 q"' | redraw! |
+                \ endif
+    au VimLeave * silent execute '!echo -ne "\e[ q"' | redraw!
 endif
 
 " backup

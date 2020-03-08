@@ -6,7 +6,8 @@
         "**/__pycache__": true,
         "**/.gitignore": true,
         "**/.ipynb_checkpoints": true,
-        "**/.vscode": true
+        "**/.vscode": true,
+        "**/_DS_Store": true
     },
     "editor.cursorBlinking": "solid",
     "workbench.enableExperiments": false,
@@ -51,11 +52,11 @@
     "latex-workshop.latexindent.args": [
         "-c",
         "%DIR%/",
-        "%TMPFILE%",
         "-y=defaultIndent: '%INDENT%'",
+        "%TMPFILE%",
         "-m",
-        "-l=/home/zekrom/scripts/UserSettings.yaml",
-        "-r"
+        "-r",
+        "-l=/home/zekrom/scripts/UserSettings.yaml"
     ],
     "latex-workshop.intellisense.package.enabled": true,
     "latex-workshop.latex.autoClean.run": "onBuilt",
