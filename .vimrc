@@ -104,7 +104,7 @@ if s:extfname ==? "tex"
     noremap  <buffer> <silent> <Down> gj
     noremap  <buffer> <silent> <Home> g<Home>
     noremap  <buffer> <silent> <End>  g<End>
-    noremap  <buffer> <silent> k   gk
+    noremap  <buffer> <silent> k gk
     noremap  <buffer> <silent> j gj
 
     " put \begin{} \end{} tags tags around the current word
