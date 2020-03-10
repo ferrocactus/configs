@@ -60,7 +60,6 @@
     ],
     "latex-workshop.intellisense.package.enabled": true,
     "latex-workshop.latex.autoClean.run": "onBuilt",
-    "latex-workshop.view.pdf.internal.synctex.keybinding": "double-click",
     "latex-workshop.view.pdf.tab.editorGroup": "current",
     "latex-workshop.latex.clean.subfolder.enabled": true,
     "latex-workshop.view.pdf.backgroundColor": "#262335",

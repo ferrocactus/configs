@@ -241,55 +241,22 @@
 [urgency_low]
     # IMPORTANT: colors have to be defined in quotation marks.
     # Otherwise the "#" and following would be interpreted as a comment.
-	#background = "#0375B4"  #starry night
-	#nelly green
-	#background = "#29bf12"
-        #background = "#028482"
-        background = "#451E3E"
-	#background = "#05666B"  #bg green
-	#background = "#00AFB7"  #sky
-	#japanese indigo
-	#foreground = "#223843"
+    background = "#451E3E"
     foreground = "#FFFFFF"
-	#original
-    #background = "#222222"
-    #foreground = "#888888"
     timeout = 5
     # Icon for notifications with low urgency, uncomment to enable
     #icon = /path/to/icon
 
 [urgency_normal]
-	#yellow
-	#background = "#FFD400"
-	#background = "#91C7B1"
-	#cyanish
-	#caribbean green
-	#background = "#03CEA4"
-#background = "#993366"
-        background = "#651E3E"
-	#foreground = "#54494B"  #dark grey
-	#foreground = "#454545"  #outer space
-	#falu red
-	#foreground = "#7F1816"
-	#dazzled blue
-	#foreground = "#345995"
-	foreground = "#FFFFFF"
-	#foreground = "#FCBD03"   #yellow
-    #original
-	#background = "#1F1427"
-    #foreground = "#ffffff"
+    background = "#943503"
+    foreground = "#FFFFFF"
     timeout = 5
     # Icon for notifications with normal urgency, uncomment to enable
     #icon = /path/to/icon
 
 [urgency_critical]
-	#vermillion
-	background = "#FC4A1A"
-	#sunshine
-	foreground = "#FFFFFF"
-	#original
-    #background = "#900000"
-    #foreground = "#ffffff"
+    background = "#FC4A1A"
+    foreground = "#FFFFFF"
     #frame_color = "#ff0000"
     timeout = 0
     # Icon for notifications with critical urgency, uncomment to enable
