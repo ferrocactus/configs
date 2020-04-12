@@ -89,5 +89,11 @@
         "**/*.run.xml",
         "**/*synctex.gz"
     ],
-    "latex-workshop.synctex.afterBuild.enabled": true
+    "latex-workshop.synctex.afterBuild.enabled": true,
+    "python.testing.autoTestDiscoverOnSaveEnabled": false,
+    "python.experiments.enabled": false,
+    "files.associations": {
+        "*.rmd": "markdown"
+    },
+    "r.editor.tabSize": 4
 }

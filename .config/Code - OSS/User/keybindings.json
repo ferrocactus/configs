@@ -44,7 +44,7 @@
         "command": "workbench.action.previousEditorInGroup"
     },
     {
-        "key": "alt+r",
+        "key": "ctrl+shift+r",
         "command": "python.datascience.notebookeditor.restartkernel"
     },
     {
@@ -90,5 +90,25 @@
     {
         "key": "alt+p",
         "command": "python.datascience.notebookeditor.runallcells"
+    },
+    {
+        "key": "alt+r",
+        "command": "-toggleSearchEditorRegex",
+        "when": "inSearchEditor && searchInputBoxFocus"
+    },
+    {
+        "key": "alt+r",
+        "command": "-toggleSearchRegex",
+        "when": "searchViewletFocus"
+    },
+    {
+        "key": "ctrl+shift+r",
+        "command": "-editor.action.refactor",
+        "when": "editorHasCodeActionsProvider && editorTextFocus && !editorReadonly"
+    },
+    {
+        "key": "ctrl+shift+r",
+        "command": "-workbench.action.quickOpenNavigatePreviousInRecentFilesPicker",
+        "when": "inQuickOpen && inRecentFilesPicker"
     }
 ]

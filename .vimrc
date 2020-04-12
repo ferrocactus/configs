@@ -16,6 +16,11 @@ highlight Pmenu ctermfg=226 ctermbg=23 guifg=#ffff00 guibg=#005F5F
 " Set syntax for extensionless files to dosini
 autocmd BufNewFile,BufRead * if expand('%:t') !~ '\.' | set syntax=dosini| endif
 
+" Restart at same location upon opening file
+"if has("autocmd")
+"  au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
+"endif
+
 " general options
 set expandtab
 set softtabstop=4

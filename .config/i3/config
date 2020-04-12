@@ -21,6 +21,7 @@ exec --no-startup-id xset b off
 exec --no-startup-id feh --bg-scale $wallpaper
 exec --no-startup-id xset r rate 400 30
 exec --no-startup-id artha
+exec --no-startup-id slack
 
 floating_modifier $mod
 bindsym $mod+Shift+q kill
