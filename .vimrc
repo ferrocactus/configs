@@ -97,7 +97,7 @@ let g:UltiSnipsJumpBackwardTrigger = "<C-J>"
 let g:UltiSnipsEditSplit = "vertical"
 
 "formatting
-noremap <buffer> <C-I> :Autoformat<CR>
+"noremap <buffer> <C-I> :Autoformat<CR>
 let g:autopep8_cmd = $HOME."/code/py3.8/bin/autopep8"
 autocmd FileType python noremap <buffer> <C-I> :call Autopep8()<CR>
 let g:autopep8_max_line_length=80

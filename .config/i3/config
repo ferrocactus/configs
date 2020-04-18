@@ -21,7 +21,7 @@ exec --no-startup-id xset b off
 exec --no-startup-id feh --bg-scale $wallpaper
 exec --no-startup-id xset r rate 400 30
 exec --no-startup-id artha
-exec --no-startup-id slack
+#exec --no-startup-id slack
 
 floating_modifier $mod
 bindsym $mod+Shift+q kill
@@ -36,11 +36,14 @@ bindsym $mod+d exec --no-startup-id rofi -show run
 #bindsym $mod+d exec --no-startup-id dmenu_run -dim .4 -h 30 -sf "#FF7F50"\
 #           -sb "#222222" -nb "#222222" -fn "-systemsanfrancisco-r-*-*-16-*"
 bindsym $mod+y exec --no-startup-id $path/youtube-dl.sh other
+bindsym $mod+Shift+Print exec --no-startup-id flameshot gui
 bindsym Print exec --no-startup-id maim ~/Pictures/Screenshots/$(date +%s).png && \
             notify-send 'Screenshot Captured'
 bindsym $mod+Print exec --no-startup-id maim -s ~/Pictures/Screenshots/$(date +%s).png && notify-send 'Window Screenshot Captured'
 
 #assign [class="Firefox"] $ws1
+assign [class="Steam"] $ws7
+assign [class="Caprine"] $ws8
 assign [class="Transmission-gtk"] $ws9
 assign [class="Slack"] $ws9
 assign [class="google-musicmanager"] $ws10
