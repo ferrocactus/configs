@@ -95,5 +95,6 @@
     "files.associations": {
         "*.rmd": "markdown"
     },
-    "r.editor.tabSize": 4
+    "r.editor.tabSize": 4,
+    "editor.colorDecorators": false
 }

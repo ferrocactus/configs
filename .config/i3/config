@@ -9,7 +9,7 @@ set $blue #003366
 set $bg-color #203139
 set $text-color $white
 set $path ~/.config/i3
-set $wallpaper ~/Pictures/orangeuniverse.png
+set $wallpaper ~/Pictures/krobelus.jpg
 
 font pango:System San Francisco 14
 set $mod Mod4
@@ -21,7 +21,7 @@ exec --no-startup-id xset b off
 exec --no-startup-id feh --bg-scale $wallpaper
 exec --no-startup-id xset r rate 400 30
 exec --no-startup-id artha
-#exec --no-startup-id slack
+exec --no-startup-id slack
 
 floating_modifier $mod
 bindsym $mod+Shift+q kill
@@ -44,8 +44,8 @@ bindsym $mod+Print exec --no-startup-id maim -s ~/Pictures/Screenshots/$(date +%
 #assign [class="Firefox"] $ws1
 assign [class="Steam"] $ws7
 assign [class="Caprine"] $ws8
+assign [class="Slack"] $ws8
 assign [class="Transmission-gtk"] $ws9
-assign [class="Slack"] $ws9
 assign [class="google-musicmanager"] $ws10
 assign [class="Google Play Music Desktop Player"] $ws10
 for_window [class="cmus"] move workspace 10
