@@ -76,5 +76,6 @@ alias ml='cd ~/CMU/Spring2020/10716_Advanced_ML/Project/src/'
 #export PYTHONSTARTUP="/home/zekrom/scripts/pystartup"
 # Ruby
 export GEM_HOME="~/.gem/ruby/2.7.0/gems"
+eval $(thefuck --alias)
 
 source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
