@@ -2,6 +2,15 @@ theme = "solarized-dark"
 icons = "awesome"
 
 [[block]]
+block = "pomodoro"
+length = 1
+break_length = 1
+message = "Break!"
+break_message = "Work!"
+use_nag = true
+nag_path = "i3-nagbar"
+
+[[block]]
 block = "custom"
 command = "~/.config/i3/cmus_playing_status.sh"
 interval = 2
@@ -31,6 +40,10 @@ block = "temperature"
 collapsed = false
 interval = 5
 format = "{average}°"
+
+[[block]]
+block = "bluetooth"
+mac = "00:00:00:01:9F:EE"
 
 #[[block]]
 #block = "nvidia_gpu"
