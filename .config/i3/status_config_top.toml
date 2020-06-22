@@ -3,8 +3,8 @@ icons = "awesome"
 
 [[block]]
 block = "pomodoro"
-length = 1
-break_length = 1
+length = 25
+break_length = 5
 message = "Break!"
 break_message = "Work!"
 use_nag = true
