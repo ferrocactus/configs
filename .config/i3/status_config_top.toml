@@ -1,9 +1,9 @@
-theme = "solarized-dark"
+theme = "gruvbox-dark"
 icons = "awesome"
 
 [[block]]
 block = "pomodoro"
-length = 25
+length = 45
 break_length = 5
 message = "Break!"
 break_message = "Work!"
