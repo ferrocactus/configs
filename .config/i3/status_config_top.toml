@@ -1,5 +1,5 @@
-theme = "gruvbox-dark"
-icons = "awesome"
+theme = "solarized-dark"
+icons = "awesome5"
 
 [[block]]
 block = "pomodoro"
@@ -41,9 +41,22 @@ collapsed = false
 interval = 5
 format = "{average}°"
 
+#[[block]]
+#block = "bluetooth"
+#mac = "00:00:00:01:9F:EE"
+
 [[block]]
-block = "bluetooth"
-mac = "00:00:00:01:9F:EE"
+block = "memory"
+format_mem = "{Mum}MB/{MTm}MB({Mup}%)"
+format_swap = "{SUm}MB/{STm}MB({SUp}%)"
+display_type = "memory"
+icons = true
+clickable = true
+interval = 5
+warning_mem = 80
+warning_swap = 80
+critical_mem = 95
+critical_swap = 95
 
 #[[block]]
 #block = "nvidia_gpu"

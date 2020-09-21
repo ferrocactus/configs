@@ -104,7 +104,12 @@ let g:autopep8_max_line_length=80
 let g:autopep8_indent_size=4
 let g:autopep8_disable_show_diff=1
 "let g:autopep8_on_save = 1
+"rust
 let g:rustfmt_autosave = 1
+"c++
+"let g:clang_format#auto_format = 1
+autocmd FileType c,cpp,objc nnoremap <buffer><C-I> :<C-u>ClangFormat<CR>
+autocmd FileType c,cpp,objc vnoremap <buffer><C-I> :ClangFormat<CR>
 
 "latex options
 let s:extfname = expand("%:e")

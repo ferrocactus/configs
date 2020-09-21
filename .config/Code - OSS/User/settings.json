@@ -26,7 +26,6 @@
     "explorer.confirmDelete": false,
     "window.zoomLevel": 0,
     "editor.renderWhitespace": "none",
-    "workbench.colorTheme": "SynthWave '84",
     "workbench.iconTheme": "material-icon-theme",
     "editor.fontSize": 13,
     "[python]": {},
@@ -96,5 +95,6 @@
         "*.rmd": "markdown"
     },
     "r.editor.tabSize": 4,
-    "editor.colorDecorators": false
+    "editor.colorDecorators": false,
+    "workbench.colorTheme": "SynthWave '84"
 }

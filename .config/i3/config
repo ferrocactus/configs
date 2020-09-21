@@ -1,5 +1,5 @@
-gaps inner 10
-gaps outer 20
+gaps inner 0
+gaps outer 0
 
 set $black #000000
 set $white #FFFFFF
@@ -9,7 +9,7 @@ set $blue #003366
 set $bg-color #203139
 set $text-color $white
 set $path ~/.config/i3
-set $wallpaper ~/Pictures/blue.png
+set $wallpaper ~/Pictures/minimalist_2.jpg
 
 font pango:System San Francisco 14
 set $mod Mod4
@@ -46,6 +46,7 @@ assign [class="Steam"] $ws7
 assign [class="Signal"] $ws7
 assign [class="Caprine"] $ws8
 assign [class="Slack"] $ws8
+assign [class="zoom"] $ws9
 assign [class="Transmission-gtk"] $ws9
 assign [class="google-musicmanager"] $ws10
 assign [class="Google Play Music Desktop Player"] $ws10
@@ -182,12 +183,12 @@ bar {
 bindsym $mod+r mode "resize"
 
 # Sound controls
-#bindsym XF86AudioMute exec --no-startup-id amixer set Master toggle
-#bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5%
-#bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5%
-bindsym XF86AudioMute exec --no-startup-id $path/volume.sh "mute"
-bindsym XF86AudioRaiseVolume exec --no-startup-id $path/volume.sh "up"
-bindsym XF86AudioLowerVolume exec --no-startup-id $path/volume.sh "down"
+bindsym XF86AudioMute exec --no-startup-id amixer set Master toggle
+bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5%
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5%
+#bindsym XF86AudioMute exec --no-startup-id $path/volume.sh "mute"
+#bindsym XF86AudioRaiseVolume exec --no-startup-id $path/volume.sh "up"
+#bindsym XF86AudioLowerVolume exec --no-startup-id $path/volume.sh "down"
 
 # Sreen brightness controls
 bindsym XF86MonBrightnessUp exec light -A 5 && notify-send `light -G`
