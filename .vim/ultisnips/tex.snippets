@@ -255,3 +255,41 @@ snippet pullback
 \end{equation*}
 $0
 endsnippet
+
+snippet pgm
+\begin{tikzpicture}
+    \begin{scope}[every node/.style={circle,thick,draw}]
+	\node ($1) at (0,0) {$1};
+	\node (Y) at (2,0) {Y};
+    \end{scope}
+
+    \begin{scope}[>={Stealth[black]},
+		  every node/.style={fill=white,circle},
+		  every edge/.style={draw=black,very thick}]
+	\path [-] ($1) edge (Y);
+    \end{scope}
+\end{tikzpicture}
+endsnippet
+
+snippet table
+\subsection{$1}
+\begin{center}
+  \noindent
+  \begin{tabularx}{\linewidth}{|m| b|}
+    \hline
+        Semester        & $2 \\\\
+    \hline
+        Credit Points   & $3 \\\\
+    \hline
+        Professor       & $4 \\\\
+    \hline
+        Grade           & $5 \\\\
+    \hline
+        Content         & $6 \\\\
+    \hline
+        Relevant Literature     & $7 \\\\
+    \hline
+  \end{tabularx}
+\end{center}
+$0
+endsnippet

@@ -72,8 +72,8 @@ alias cmu='cd ~/CMU'
 alias fall='cd ~/CMU/Fall2020'
 alias cell='cd ~/CMU/cellar'
 alias cmuvpn='sudo openconnect vpn.cmu.edu'
-alias cv='cd ~/CMU/Fall2020/Convex\ Optimization/HW/HW2'
-alias pgm='cd ~/CMU/Fall2020/PGM/HW/HW1'
+alias cv='cd ~/CMU/Fall2020/Convex\ Optimization/HW/HW4'
+alias pgm='cd ~/CMU/Fall2020/PGM/HW/HW3'
 
 #export PYTHONSTARTUP="/home/zekrom/scripts/pystartup"
 # Ruby
