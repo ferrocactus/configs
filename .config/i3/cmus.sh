@@ -38,7 +38,7 @@ elif [ $1 == "seekp" ]; then
     cmus-remote -k -20
 elif [ $1 == "update" ]; then
     cmus-remote -c -l && \
-    cmus-remote -l ~/Music && \
+    cmus-remote -l ~/Floatzel/Music && \
     cmus-remote -C "view 2" && \
     notify-send "Playlist updated"
 fi

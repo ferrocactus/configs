@@ -9,7 +9,7 @@ set $blue #003366
 set $bg-color #203139
 set $text-color $white
 set $path ~/.config/i3
-set $wallpaper ~/Pictures/minimalist_2.jpg
+set $wallpaper ~/Floatzel/Pictures/minimalist_2.jpg
 
 font pango:System San Francisco 14
 set $mod Mod4
@@ -37,9 +37,9 @@ bindsym $mod+d exec --no-startup-id rofi -show run
 #           -sb "#222222" -nb "#222222" -fn "-systemsanfrancisco-r-*-*-16-*"
 bindsym $mod+y exec --no-startup-id $path/youtube-dl.sh other
 bindsym $mod+Shift+Print exec --no-startup-id flameshot gui
-bindsym Print exec --no-startup-id maim ~/Pictures/Screenshots/$(date +%s).png && \
+bindsym Print exec --no-startup-id maim ~/Floatzel/Pictures/Screenshots/$(date +%s).png && \
             notify-send 'Screenshot Captured'
-bindsym $mod+Print exec --no-startup-id maim -s ~/Pictures/Screenshots/$(date +%s).png && notify-send 'Window Screenshot Captured'
+bindsym $mod+Print exec --no-startup-id maim -s ~/Floatzel/Pictures/Screenshots/$(date +%s).png && notify-send 'Window Screenshot Captured'
 
 #assign [class="Firefox"] $ws1
 assign [class="Steam"] $ws7
