@@ -12,7 +12,7 @@ nag_path = "i3-nagbar"
 
 [[block]]
 block = "custom"
-command = "~/.config/i3/cmus_playing_status.sh"
+command = "echo `~/.config/i3/cmus_playing_status.sh`"
 interval = 2
 
 [[block]]

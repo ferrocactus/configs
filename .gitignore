@@ -19,6 +19,7 @@
 !.config/rofi/
 !.config/termite/
 !.config/youtube-dl.conf
+!.config/mimeapps.list
 !.fonts/
 !.gitignore
 !.gtkrc-2.0.mine
