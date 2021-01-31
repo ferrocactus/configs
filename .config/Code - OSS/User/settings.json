@@ -96,5 +96,7 @@
     },
     "r.editor.tabSize": 4,
     "editor.colorDecorators": false,
-    "workbench.colorTheme": "SynthWave '84"
+    "workbench.colorTheme": "SynthWave '84",
+    "r.dependencyChecks": false,
+    "r.interpreterPath": "/usr/bin/R"
 }

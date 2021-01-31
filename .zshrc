@@ -75,6 +75,8 @@ alias pgm='cd ~/CMU/Fall2020/PGM/Project'
 alias phd='cd ~/Documents/PhD'
 alias f='cd ~/Floatzel'
 alias fdel='mv -t ~/Floatzel/.trash'
+alias rit='cd ~/Floatzel/Ritech'
+alias torch='cd ~/code/python/pytorch'
 
 #export PYTHONSTARTUP="/home/zekrom/scripts/pystartup"
 # Ruby
