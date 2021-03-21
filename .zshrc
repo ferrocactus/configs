@@ -61,7 +61,7 @@ alias cltrash='rm -rf ~/.local/share/Trash/files/* && rm -rf ~/.local/share/Tras
 alias sudocltrash='sudo rm -rf ~/.local/share/Trash/files/* && sudo rm -rf ~/.local/share/Trash/info/* && sudo rm -rf ~/.local/share/Trash/files/.*'
 alias matlab-cli='matlab -nodisplay -nojvm -nosplash'
 alias i3lock='lock'
-alias eu='function _buff(){g++ $1.cpp && ./a.out};_buff'
+alias eu='function _buff(){g++ $1 && ./a.out};_buff'
 alias new='function _buff(){cp ~/code/cpp/Codeforces/template.cpp $1.cpp; vim $1.cpp;};_buff'
 alias dok='function _buff(){docker run -it --rm -v $1:/home/dzekrom/mounted:rw --gpus all};_buff'
 alias dokjup='function _buff(){docker run -it --rm -v $1:/home/dzekrom/mounted:rw --gpus all -p 8888:8888 tf jupyter notebook --ip=0.0.0.0 --no-browser};_buff'

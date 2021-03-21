@@ -69,6 +69,9 @@ autocmd filetype cpp nnoremap <leader>k :w <bar> !g++ -ulimit -Wall -Wno-unused-
 autocmd filetype cpp nnoremap <leader>r :w <bar> !./run <CR>
 autocmd filetype py nnoremap <leader>k :w <bar> !python % <CR>
 
+" auto comment
+autocmd FileType cpp setlocal commentstring=//\ %s
+
 " airline theme
 let g:airline_theme='powerlineish'
 let g:airline_section_c = '%F' " Full filepath
@@ -98,7 +101,7 @@ let g:UltiSnipsEditSplit = "vertical"
 
 "formatting
 "noremap <buffer> <C-I> :Autoformat<CR>
-let g:autopep8_cmd = $HOME."/code/py3.8/bin/autopep8"
+let g:autopep8_cmd = $HOME."/code/py3.7/bin/autopep8"
 autocmd FileType python noremap <buffer> <C-I> :call Autopep8()<CR>
 let g:autopep8_max_line_length=80
 let g:autopep8_indent_size=4

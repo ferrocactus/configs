@@ -24,7 +24,6 @@
     "editor.minimap.enabled": false,
     "git.enableSmartCommit": true,
     "explorer.confirmDelete": false,
-    "window.zoomLevel": 0,
     "editor.renderWhitespace": "none",
     "workbench.iconTheme": "material-icon-theme",
     "editor.fontSize": 13,
@@ -98,5 +97,9 @@
     "editor.colorDecorators": false,
     "workbench.colorTheme": "SynthWave '84",
     "r.dependencyChecks": false,
-    "r.interpreterPath": "/usr/bin/R"
+    "r.interpreterPath": "/usr/bin/R",
+    "editor.rulers": [
+        80
+    ],
+    "python.dataScience.alwaysTrustNotebooks": true
 }
