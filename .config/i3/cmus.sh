@@ -1,5 +1,9 @@
 #!/bin/bash
 
+if pgrep -x clementine; then
+    exit
+fi
+
 if [ $1 == "play" ]; then
     if ! pgrep -x cmus ; then
         termite --class=cmus -e cmus & \

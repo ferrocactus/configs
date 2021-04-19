@@ -32,6 +32,7 @@ application/nbib=gvim.desktop;
 application/wps-office.doc=userapp-wps-BO75S0.desktop;
 application/vnd.openxmlformats-officedocument.wordprocessingml.document=wps-office-wps.desktop;
 image/svg+xml=viewnior.desktop;
+application/json=gvim.desktop;
 
 [Default Applications]
 image/png=viewnior.desktop
@@ -93,5 +94,6 @@ application/wps-office.wpss=wps-office-wps.desktop
 application/wps-office.wpso=wps-office-wps.desktop
 application/wps-office.wpt=wps-office-wps.desktop
 image/svg+xml=viewnior.desktop
+application/json=gvim.desktop
 
 [Removed Associations]

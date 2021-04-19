@@ -1,5 +1,5 @@
 snippet start
-#include<bits/stdc++.h>
+#include <bits/stdc++.h>
 #define ll long long
 #define ar array
 using namespace std;
@@ -8,6 +8,11 @@ int main() {
     $1
     return 0;
 }
+endsnippet
+
+snippet fastcin
+ios_base::sync_with_stdio(0);
+cin.tie(0);
 endsnippet
 
 snippet vi
@@ -40,11 +45,9 @@ snippet fast_pow
 ll fast_pow(ll base, ll power, ll mod) {
     ll result = 1;
     while(power > 0) {
-        if(power & 1 == 1) {
-            result = (result * base) % mod;
-        }
+        if(power & 1 == 1) result = (result * base) % mod;
         base = (base * base) % mod;
-        power = power >>= 1;
+        power >>= 1;
     }
     return result;
 }
@@ -109,5 +112,67 @@ T upper_bound(T (*gen)(T), T l, T r, T key) {
     }
     if (gen(l) > key) return l;
     return l + 1;
+}
+endsnippet
+
+snippet modinv
+ll modinv(ll a, ll m) {
+    ll m0 = m;
+    ll y = 0, x = 1;
+
+    while (a > 1) {
+        ll q = a / m;
+        ll t = m;
+        m = a % m, a = t;
+        t = y;
+        y = x - q * y;
+        x = t;
+    }
+    if (x < 0) x += m0;
+
+    return x;
+}
+endsnippet
+
+snippet fact
+ll fact(ll n, ll m) {
+    ll prod = 1;
+    for (int i = 2; i <= n; ++i) prod = (prod * i) % m;
+    return prod;
+}
+endsnippet
+
+snippet matmul
+const int M = 1e9 + 7;
+const ll M2 = (ll)M * M;
+typedef vector<ll> vi;
+typedef vector<vector<ll>> vvi;
+vvi matmul(const vvi &v1, const vvi &v2) {
+    vvi v3(v1.size(), vi(v2[0].size()));
+
+    for (int i = 0; i < v1.size(); ++i) {
+        for (int j = 0; j < v2[0].size(); ++j) {
+            for (int k = 0; k < v1[0].size(); ++k) {
+                v3[i][j] += v1[i][k] * v2[k][j];
+                if (v3[i][j] >= M2) v3[i][j] -= M2;
+            }
+        }
+    }
+
+    for (int i = 0; i < v3.size(); ++i)
+        for (int j = 0; j < v3[0].size(); ++j) v3[i][j] %= M;
+
+    return v3;
+}
+
+vvi mat_fast_pow(vvi base, ll power) {
+    vvi result = vvi(base.size(), vi(base[0].size()));
+    for (int i = 0; i < 64; ++i) result[i][i] = 1;
+    while (power > 0) {
+        if (power & 1 == 1) result = matmul(result, base);
+        base = matmul(base, base);
+        power >>= 1;
+    }
+    return result;
 }
 endsnippet
