@@ -95,11 +95,14 @@
     },
     "r.editor.tabSize": 4,
     "editor.colorDecorators": false,
-    "workbench.colorTheme": "SynthWave '84",
+    "workbench.colorTheme": "GitHub Light",
     "r.dependencyChecks": false,
     "r.interpreterPath": "/usr/bin/R",
     "editor.rulers": [
         80
     ],
-    "python.dataScience.alwaysTrustNotebooks": true
+    "python.dataScience.alwaysTrustNotebooks": true,
+    "python.condaPath": "/opt/miniconda3/bin/conda",
+    "terminal.integrated.inheritEnv": false,
+    "vim.disableExtension": true
 }
