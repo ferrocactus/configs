@@ -78,6 +78,7 @@ alias fdel='mv -t ~/Floatzel/.trash'
 alias rit='cd ~/Floatzel/Ritech'
 alias torch='cd ~/code/python/pytorch'
 alias ama='source /opt/anaconda/bin/activate maersk'
+alias lutris="sudo sh -c 'sysctl -w abi.vsyscall32=0' && lutris"
 
 #export PYTHONSTARTUP="/home/zekrom/scripts/pystartup"
 # Ruby

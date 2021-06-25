@@ -19,7 +19,7 @@ text/x-c++src=gvim.desktop;
 text/x-bibtex=gvim.desktop;
 application/wps-office.pdf=org.gnome.Evince.desktop;qpdfview.desktop;
 text/csv=gvim.desktop;
-audio/mpeg=userapp-cmus-remote -f-0QE1G0.desktop;userapp-cmus-remote -c -q && cmus-remote -f-SJE5G0.desktop;userapp-cmus-remote -c -q && cmus-remote -f-JBB9G0.desktop;userapp-cmus-remote -c -q && cmus-remote -f-URA9G0.desktop;userapp-cmus-remote -q-SL21G0.desktop;
+audio/mpeg=spotify.desktop;userapp-cmus-remote -f-0QE1G0.desktop;userapp-cmus-remote -c -q && cmus-remote -f-SJE5G0.desktop;userapp-cmus-remote -c -q && cmus-remote -f-JBB9G0.desktop;userapp-cmus-remote -c -q && cmus-remote -f-URA9G0.desktop;userapp-cmus-remote -q-SL21G0.desktop;
 text/x-tex=sublime_text.desktop;
 application/x-tex=gvim.desktop;
 application/vnd.adobe.flash.movie=flashplayer-standalone.desktop;org.xfce.Parole.desktop;
@@ -33,6 +33,7 @@ application/wps-office.doc=userapp-wps-BO75S0.desktop;
 application/vnd.openxmlformats-officedocument.wordprocessingml.document=wps-office-wps.desktop;
 image/svg+xml=viewnior.desktop;
 application/json=gvim.desktop;
+application/x-sh=gvim.desktop;
 
 [Default Applications]
 image/png=viewnior.desktop
@@ -61,7 +62,7 @@ text/csv=gvim.desktop
 x-scheme-handler/mailto=chromium.desktop
 x-scheme-handler/about=chromium.desktop
 x-scheme-handler/unknown=chromium.desktop
-audio/mpeg=userapp-cmus-remote -f-0QE1G0.desktop
+audio/mpeg=spotify.desktop
 text/x-tex=sublime_text.desktop
 application/vnd.adobe.flash.movie=flashplayer-standalone.desktop
 application/x-ms-dos-executable=userapp-wine-NEK1I0.desktop

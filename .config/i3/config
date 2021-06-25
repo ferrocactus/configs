@@ -48,8 +48,6 @@ assign [class="Caprine"] $ws8
 assign [class="Slack"] $ws8
 assign [class="zoom"] $ws9
 assign [class="Transmission-gtk"] $ws9
-assign [class="google-musicmanager"] $ws10
-assign [class="Google Play Music Desktop Player"] $ws10
 for_window [class="cmus"] move workspace 10
 
 # change focus
@@ -183,12 +181,12 @@ bar {
 bindsym $mod+r mode "resize"
 
 # Sound controls
-#bindsym XF86AudioMute exec --no-startup-id amixer set Master toggle
-#bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5%
-#bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5%
-bindsym XF86AudioMute exec --no-startup-id $path/volume.sh "mute"
-bindsym XF86AudioRaiseVolume exec --no-startup-id $path/volume.sh "up"
-bindsym XF86AudioLowerVolume exec --no-startup-id $path/volume.sh "down"
+bindsym XF86AudioMute exec --no-startup-id amixer set Master toggle
+bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5%
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5%
+#bindsym XF86AudioMute exec --no-startup-id $path/volume.sh "mute"
+#bindsym XF86AudioRaiseVolume exec --no-startup-id $path/volume.sh "up"
+#bindsym XF86AudioLowerVolume exec --no-startup-id $path/volume.sh "down"
 
 # Sreen brightness controls
 bindsym XF86MonBrightnessUp exec light -A 5 && notify-send `light -G`
@@ -196,17 +194,34 @@ bindsym XF86MonBrightnessDown exec light -U 5 && notify-send `light -G`
 
 # ***************   cmus   ****************
 # Media player controls
-bindsym XF86AudioPlay exec --no-startup-id $path/cmus.sh play
-bindsym XF86AudioPause exec --no-startup-id $path/cmus.sh play
-bindsym XF86AudioNext exec --no-startup-id $path/cmus.sh next
-bindsym XF86AudioPrev exec --no-startup-id  $path/cmus.sh prev
+#bindsym XF86AudioPlay exec --no-startup-id $path/cmus.sh play
+#bindsym XF86AudioPause exec --no-startup-id $path/cmus.sh play
+#bindsym XF86AudioNext exec --no-startup-id $path/cmus.sh next
+#bindsym XF86AudioPrev exec --no-startup-id  $path/cmus.sh prev
+## play control
+## start cmus if not active
+#bindsym Shift+Ctrl+space exec --no-startup-id $path/cmus.sh play
+#bindsym Shift+Ctrl+d exec --no-startup-id $path/cmus.sh next
+#bindsym Shift+Ctrl+a exec --no-startup-id $path/cmus.sh prev
+## seek
+#bindsym Shift+Ctrl+s exec --no-startup-id $path/cmus.sh seekf
+#bindsym Shift+Ctrl+w exec --no-startup-id $path/cmus.sh seekp
+## update playlist
+#bindsym Shift+Ctrl+u exec --no-startup-id $path/cmus.sh update
+
+# ***************   spotify   ****************
+# Media player controls
+bindsym XF86AudioPlay exec --no-startup-id $path/spotify.sh play
+bindsym XF86AudioPause exec --no-startup-id $path/spotify.sh play
+bindsym XF86AudioNext exec --no-startup-id $path/spotify.sh next
+bindsym XF86AudioPrev exec --no-startup-id  $path/spotify.sh prev
 # play control
 # start cmus if not active
-bindsym Shift+Ctrl+space exec --no-startup-id $path/cmus.sh play
-bindsym Shift+Ctrl+d exec --no-startup-id $path/cmus.sh next
-bindsym Shift+Ctrl+a exec --no-startup-id $path/cmus.sh prev
+bindsym Shift+Ctrl+space exec --no-startup-id $path/spotify.sh play
+bindsym Shift+Ctrl+d exec --no-startup-id $path/spotify.sh next
+bindsym Shift+Ctrl+a exec --no-startup-id $path/spotify.sh prev
 # seek
-bindsym Shift+Ctrl+s exec --no-startup-id $path/cmus.sh seekf
-bindsym Shift+Ctrl+w exec --no-startup-id $path/cmus.sh seekp
-# update playlist
-bindsym Shift+Ctrl+u exec --no-startup-id $path/cmus.sh update
+#bindsym Shift+Ctrl+s exec --no-startup-id $path/spotify.sh seekf
+#bindsym Shift+Ctrl+w exec --no-startup-id $path/spotify.sh seekp
+## update playlist
+#bindsym Shift+Ctrl+u exec --no-startup-id $path/spotify.sh update

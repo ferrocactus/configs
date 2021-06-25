@@ -11,6 +11,13 @@ use_nag = true
 nag_path = "i3-nagbar"
 
 [[block]]
+block = "music"
+player = "spotify"
+dynamic_width = true
+on_collapsed_click = "spotify"
+buttons = ["prev", "play", "next"]
+
+[[block]]
 block = "custom"
 command = "echo `~/.config/i3/cmus_playing_status.sh`"
 interval = 2
